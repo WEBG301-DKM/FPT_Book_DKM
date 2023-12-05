@@ -101,7 +101,15 @@ namespace BookShop1Asm.Controllers
         [HttpPost]
         public IActionResult Delete(Book book)
         {
-
+            if (!String.IsNullOrEmpty(book.Cover))
+            {
+                string wwwRootPath = _webHost.WebRootPath;
+                var oldImagePath = Path.Combine(wwwRootPath, book.Cover.TrimStart('\\'));
+                if (System.IO.File.Exists(oldImagePath))
+                {
+                    System.IO.File.Delete(oldImagePath);
+                }
+            }
             _dbContext.Book.Remove(book);
             _dbContext.SaveChanges();
             //_unitOfWork.BookRepository.Remove(book);
