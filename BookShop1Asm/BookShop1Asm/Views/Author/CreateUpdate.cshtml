@@ -1,0 +1,43 @@
+﻿@model Author
+<!-- <partial name="_Notification"/> -->
+
+<h1>@(Model.Id==0?"Create":"Update") Author</h1>
+<form  method="post" enctype="multipart/form-data">
+  <input asp-for="Id" hidden />
+  <input asp-for="Photo" hidden/>
+  <div class="form-group">
+    <img src="@Model.Photo" style="max-width:250px;width:100%"/>
+  </div>
+  <div class="form-group">
+    <label asp-for="Alias">Name</label>
+    <input asp-for="Alias" />
+    <span asp-validation-for="Alias" class="text-danger"></span>
+  </div>
+  <div class="form-group">
+    <label asp-for="Info">Description</label>
+    <input asp-for="Info" />
+    <span asp-validation-for="Info" class="text-danger"></span>
+  </div>
+  <div>
+    <label asp-for="Photo"></label>
+    <input type="file" name="file" class="form-control">
+  </div>
+  <div class="btn group" role="group">
+            @if (Model.Id == 0)
+            {
+                <button type="submit" class="btn btn-primary">Create</button>
+            }
+            else
+            {
+                <button type="submit" class="btn btn-primary">Update</button>
+            }
+
+            <a asp-controller="Book" asp-action="Index" class="btn btn-primary">
+                Back to List
+            </a>
+        </div>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial"/>
+}
