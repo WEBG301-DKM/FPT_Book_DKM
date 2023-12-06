@@ -1,3 +1,6 @@
+using BookShop1Asm.Helpers;
+using BookShop1Asm.Interfaces;
+using BookShop1Asm.Repositories;
 using BookShopAsm.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,6 +10,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<AppDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<IUnitOfWork, UnitOfWorkRepository>();
+builder.Services.AddTransient<IUnitOfWork, UnitOfWorkRepository>();
+
+var config = new AutoMapper.MapperConfiguration(cfg =>
+{
+    cfg.AddProfile(new Helper());
+});
+var mapper = config.CreateMapper();
+builder.Services.AddSingleton(mapper);
 
 var app = builder.Build();
 

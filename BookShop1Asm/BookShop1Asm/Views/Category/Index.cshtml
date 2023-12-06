@@ -1,12 +1,14 @@
-﻿@model List<Category>
+﻿@model List<BookShop1Asm.ViewModels.CategoryViewModel.CategoryViewModel>
 
-<div class="row pt-4 pb-4">
-    <div class="col-6">
-        <h1>List of Category</h1>
-    </div>
-    <div class="col-6">
-        <a asp-controllder="Category" asp-action="Create" class="btn btn-primary">Create new Category</a>
-        </div>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-controllder="Category" asp-action="Create" class="btn btn-primary">Create new Category</a>
+</p>
 <table>
  <thead>
      <tr>
