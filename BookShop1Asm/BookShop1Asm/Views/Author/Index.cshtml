@@ -1,0 +1,36 @@
+﻿@model List<Author>
+<!-- <partial name="_Notification"/> -->
+
+<div class="row pt-4 pb-4">
+    <div class="col-6">
+        <h1>List of Book</h1>
+    </div>
+    <div class="col-6">
+        <a asp-controllder="Book" asp-action="CreateUpdate" class="btn btn-primary">Create new Author</a>
+        </div>
+<table>
+ <thead>
+     <tr>
+         <th>Photo</th>
+         <th>Alias</th>
+         <th>Info</th>
+     </tr>
+ </thead>
+ <tbody>
+     @foreach(var author in Model)
+     {
+     <tr>
+         <td><img src="@author.Photo" style="max-width:250px;width:100%"/></td>
+         <td>@author.Alias</td>
+         <td>@author.Info</td>
+
+         <td>
+             <div class="btn-group" role="group">
+                 <a asp-controller="Author" asp-action="CreateUpdate" asp-route-id="@author.Id" asp-items class="btn-primary">Edit</a>
+                 <a asp-controller="Author" asp-action="Delete" asp-route-id="@author.Id" class="btn-primary">Delete</a>
+             </div>
+         </td>
+     </tr>
+     }
+ </tbody>
+</table>

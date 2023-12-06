@@ -11,6 +11,7 @@ namespace BookShop1Asm.Models
         public string? Cover { get; set; }
         public string Description { get; set; }
         public float Price { get; set; }
+        public List<BookCategory> BookCategories { get; set; }
 
     }
 }
