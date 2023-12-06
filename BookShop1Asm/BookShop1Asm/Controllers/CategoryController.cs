@@ -9,22 +9,22 @@ namespace BookShop1Asm.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly AppDBContext _dbContext;
-        //private readonly IUnitOfWork _unitOfWork;
-        private IMapper _mapper;
-        public CategoryController(/*IUnitOfWork unitOfWork*/AppDBContext dbContext, IMapper mapper)
+        //private readonly AppDBContext _dbContext;
+        private readonly IUnitOfWork _unitOfWork;
+        //private IMapper _mapper;
+        public CategoryController(IUnitOfWork unitOfWork /*, AppDBContext dbContext, IMapper mapper*/)
         {
-            _dbContext = dbContext;
-            //_unitOfWork = unitOfWork;
-            _mapper = mapper;
+            //_dbContext = dbContext;
+            _unitOfWork = unitOfWork;
+            //_mapper = mapper;
         }
 
         public IActionResult Index()
         {
-            //var model = _unitOfWork.Category.GetAll();
-            var model = _dbContext.Category.ToList();
-            var viewmodel = _mapper.Map<List<CategoryViewModel>>(model);
-            return View(viewmodel);
+            List<Category> categories = _unitOfWork.Category.GetAll();
+            //var model = _dbContext.Category.ToList();
+            //var viewmodel = _mapper.Map<List<CategoryViewModel>>(model);
+            return View(categories);
         }
         public IActionResult Create()
         {
@@ -33,10 +33,10 @@ namespace BookShop1Asm.Controllers
         [HttpPost]
         public IActionResult Create(Category category)
         {
-            _dbContext.Category.Add(category);
-            _dbContext.SaveChanges();
-            //_unitOfWork.Category.Insert(category);
-            //_unitOfWork.Save();
+            //_dbContext.Category.Add(category);
+            //_dbContext.SaveChanges();
+            _unitOfWork.Category.Insert(category);
+            _unitOfWork.Save();
             return RedirectToAction("Index");
         }
 
@@ -46,8 +46,8 @@ namespace BookShop1Asm.Controllers
             {
                 return NotFound();
             }
-            Category category = _dbContext.Category.Find(id);
-            //Category category = _unitOfWork.Category.GetById(id);
+            //Category category = _dbContext.Category.Find(id);
+            Category category = _unitOfWork.Category.GetById(id);
             if (category == null)
             {
                 return NotFound();
@@ -61,10 +61,10 @@ namespace BookShop1Asm.Controllers
         {
             if (ModelState.IsValid)
             {
-                _dbContext.Category.Update(category);
-                _dbContext.SaveChanges();
-                //_unitOfWork.Category.Update(category);
-                //_unitOfWork.Save();
+                //_dbContext.Category.Update(category);
+                //_dbContext.SaveChanges();
+                _unitOfWork.Category.Update(category);
+                _unitOfWork.Save();
                 TempData["success"] = "Edited successfully";
                 return RedirectToAction("index");
             }
@@ -78,8 +78,8 @@ namespace BookShop1Asm.Controllers
             {
                 return NotFound();
             }
-            Category? category = _dbContext.Category.Find(id);
-            //Category? category = _unitOfWork.Category.GetById(id);
+            //Category? category = _dbContext.Category.Find(id);
+            Category? category = _unitOfWork.Category.GetById(id);
             if (category == null)
             {
                 return NotFound();
@@ -91,10 +91,10 @@ namespace BookShop1Asm.Controllers
         public IActionResult Delete(Category category)
         {
 
-            _dbContext.Category.Remove(category);
-            _dbContext.SaveChanges();
-            //_unitOfWork.Category.Delete(category);
-            //_unitOfWork.Save();
+            //_dbContext.Category.Remove(category);
+            //_dbContext.SaveChanges();
+            _unitOfWork.Category.Delete(category);
+            _unitOfWork.Save();
             TempData["success"] = "Category deleted succesfully";
             return RedirectToAction("Index");
         }

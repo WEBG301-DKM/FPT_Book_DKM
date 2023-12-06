@@ -8,6 +8,12 @@ namespace BookShop1Asm.Repositories
         private readonly AppDBContext _context;
         private IBook _book;
         private ICategory _category;
+
+        public UnitOfWorkRepository(AppDBContext context)
+        {
+            _context = context;
+        }
+
         public IBook Book
         {
             get

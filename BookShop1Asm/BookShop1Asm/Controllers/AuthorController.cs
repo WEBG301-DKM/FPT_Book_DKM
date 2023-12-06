@@ -40,7 +40,6 @@ namespace BookShop1Asm.Controllers
 
         }
         [HttpPost]
-
         public IActionResult CreateUpdate(Author author, IFormFile? file)
         {
 

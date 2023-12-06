@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<AppDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddScoped<IUnitOfWork, UnitOfWorkRepository>();
+//builder.Services.AddScoped<IUnitOfWork, UnitOfWorkRepository>();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWorkRepository>();
 
 var config = new AutoMapper.MapperConfiguration(cfg =>

@@ -1,7 +1,7 @@
 ﻿@model Book
 <!-- <partial name="_Notification"/> -->
 
-<h1>@(Model.Id==0?"Create":"Update") Book</h1>
+<h1>@(Model.Id==0 ?"Create":"Update") Book</h1>
 <form  method="post" enctype="multipart/form-data">
   <input asp-for="Id" hidden />
   <input asp-for="Cover" hidden/>
