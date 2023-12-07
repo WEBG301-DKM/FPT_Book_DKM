@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7hflBcbb0H+sFn6HPgKpA/jmD1Dl3ulaPSI1Wg8Y0Ak=",
+  "Hash": "vnRyzS+29YZ42c2PUJbClMjJq1gjlOXIfJjOGa9MMEo=",
   "Source": "BookShop1Asm",
   "BasePath": "_content/BookShop1Asm",
   "Mode": "Default",
@@ -100,6 +100,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "E:\\Repos\\FPT_Book_DKM\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\bootstrap-multiselect.css",
+      "SourceId": "BookShop1Asm",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Repos\\FPT_Book_DKM\\BookShop1Asm\\BookShop1Asm\\wwwroot\\",
+      "BasePath": "_content/BookShop1Asm",
+      "RelativePath": "lib/bootstrap/dist/bootstrap-multiselect.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\bootstrap-multiselect.css"
+    },
+    {
+      "Identity": "E:\\Repos\\FPT_Book_DKM\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\bootstrap-multiselect.js",
+      "SourceId": "BookShop1Asm",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Repos\\FPT_Book_DKM\\BookShop1Asm\\BookShop1Asm\\wwwroot\\",
+      "BasePath": "_content/BookShop1Asm",
+      "RelativePath": "lib/bootstrap/dist/bootstrap-multiselect.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\bootstrap-multiselect.js"
     },
     {
       "Identity": "E:\\Repos\\FPT_Book_DKM\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

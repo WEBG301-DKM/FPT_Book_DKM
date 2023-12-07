@@ -1,7 +1,6 @@
-﻿using AutoMapper;
+﻿
 using BookShop1Asm.Interfaces;
 using BookShop1Asm.Models;
-using BookShop1Asm.ViewModels.CategoryViewModel;
 using BookShopAsm.Data;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,18 +11,16 @@ namespace BookShop1Asm.Controllers
         //private readonly AppDBContext _dbContext;
         private readonly IUnitOfWork _unitOfWork;
         //private IMapper _mapper;
-        public CategoryController(IUnitOfWork unitOfWork /*, AppDBContext dbContext, IMapper mapper*/)
+        public CategoryController(IUnitOfWork unitOfWork /*, AppDBContext dbContext*/)
         {
             //_dbContext = dbContext;
             _unitOfWork = unitOfWork;
-            //_mapper = mapper;
         }
 
         public IActionResult Index()
         {
             List<Category> categories = _unitOfWork.Category.GetAll();
             //var model = _dbContext.Category.ToList();
-            //var viewmodel = _mapper.Map<List<CategoryViewModel>>(model);
             return View(categories);
         }
         public IActionResult Create()

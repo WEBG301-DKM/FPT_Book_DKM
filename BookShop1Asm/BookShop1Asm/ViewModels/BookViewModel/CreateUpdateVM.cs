@@ -1,6 +1,7 @@
 ﻿using BookShop1Asm.Models;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel.DataAnnotations;
 
 namespace BookShop1Asm.ViewModels.BookViewModel
 {
@@ -10,6 +11,7 @@ namespace BookShop1Asm.ViewModels.BookViewModel
 
         [ValidateNever]
         public IEnumerable<SelectListItem> MyCategories { get; set; }
-        public string[] SelectedCategories { get; set; }
+        [Display(Name ="Categories")]
+        public int[] CatIDs { get; set; }
     }
 }
