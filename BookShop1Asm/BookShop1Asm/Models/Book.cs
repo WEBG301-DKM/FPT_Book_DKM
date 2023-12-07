@@ -13,7 +13,7 @@ namespace BookShop1Asm.Models
         public string Description { get; set; }
         public float Price { get; set; }
         [ValidateNever]
-        public List<BookCategory> BookCategories { get; set; }
+        public List<BookCategory> BookCategories { get; set; } = new List<BookCategory>();
 
     }
 }

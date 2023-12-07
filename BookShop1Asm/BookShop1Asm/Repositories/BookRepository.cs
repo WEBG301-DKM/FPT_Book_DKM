@@ -1,6 +1,7 @@
 ﻿using BookShop1Asm.Interfaces;
 using BookShop1Asm.Models;
 using BookShopAsm.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookShop1Asm.Repositories
 {
@@ -24,7 +25,7 @@ namespace BookShop1Asm.Repositories
 
         public Book GetById(int id)
         {
-            return _context.Book.Find(id);
+            return _context.Book.Include("BookCategories.Category").FirstOrDefault(x => x.Id == id);
         }
 
         public void Insert(Book book)

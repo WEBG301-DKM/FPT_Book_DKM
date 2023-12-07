@@ -1,7 +1,11 @@
-﻿using BookShop1Asm.Interfaces;
+﻿using AutoMapper;
+using BookShop1Asm.Interfaces;
 using BookShop1Asm.Models;
+using BookShop1Asm.ViewModels.BookViewModel;
 using BookShopAsm.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Linq;
 
 namespace BookShop1Asm.Controllers
 {
@@ -10,12 +14,14 @@ namespace BookShop1Asm.Controllers
         //private readonly AppDBContext _dbContext;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IWebHostEnvironment _webHost;
-        
-        public BookController(/*AppDBContext dbContext*/ IUnitOfWork unitOfWork, IWebHostEnvironment webhost)
+        private IMapper _mapper;
+
+        public BookController(/*AppDBContext dbContext*/ IUnitOfWork unitOfWork, IWebHostEnvironment webhost, IMapper mapper)
         {
             //_dbContext = dbContext;
             _unitOfWork = unitOfWork;
             _webHost = webhost;
+            _mapper = mapper;
         }
 
         public IActionResult Index()
@@ -27,23 +33,40 @@ namespace BookShop1Asm.Controllers
 
         public IActionResult CreateUpdate(int id)
         {
-            Book book = new Book();
-            if (id == null || id == 0)
+            CreateUpdateVM bookCUvm = new CreateUpdateVM()
+            {
+                MyCategories = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
+                {
+                    Text = u.Name,
+                    Value = u.Id.ToString()
+                }),
+                Book = new Book()
+            };
+            if (id == 0)
             {
                 //Create new Book
-                return View(book);
+                return View(bookCUvm);
             }
             else
             {
                 //Update a Book
                 //book = _dbContext.Book.Find(id);
-                book = _unitOfWork.Book.GetById(id);
-                return View(book);
+                bookCUvm.Book = _unitOfWork.Book.GetById(id);
+                var categories = _unitOfWork.Category.GetAll();
+                var selectCategories = bookCUvm.Book.BookCategories.Select(x => new Category()
+                {
+                    Id = x.Category.Id,
+                    Name = x.Category.Name,
+                });
+                var selectList = new List<SelectListItem>();
+                categories.ForEach(i => selectList.Add(new SelectListItem(i.Name, i.Id.ToString(), selectCategories.Select(x => x.Id).Contains(i.Id))));
+
+                return View(bookCUvm);
             }
 
         }
         [HttpPost]
-        public IActionResult CreateUpdate(Book book, IFormFile? file)
+        public IActionResult CreateUpdate(CreateUpdateVM bookCUvm, IFormFile? file)
         {
             if (ModelState.IsValid)
             {
@@ -52,9 +75,9 @@ namespace BookShop1Asm.Controllers
                 {
                     string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
                     string bookPath = Path.Combine(wwwRootPath, "img\\bookcover");
-                    if (!String.IsNullOrEmpty(book.Cover))
+                    if (!String.IsNullOrEmpty(bookCUvm.Book.Cover))
                     {
-                        var oldImagePath = Path.Combine(wwwRootPath, book.Cover.TrimStart('\\'));
+                        var oldImagePath = Path.Combine(wwwRootPath, bookCUvm.Book.Cover.TrimStart('\\'));
                         if (System.IO.File.Exists(oldImagePath))
                         {
                             System.IO.File.Delete(oldImagePath);
@@ -64,18 +87,30 @@ namespace BookShop1Asm.Controllers
                     {
                         file.CopyTo(fileStream);
                     }
-                    book.Cover = @"\img\bookcover\" + fileName;
+                    bookCUvm.Book.Cover = @"\img\bookcover\" + fileName;
                 }
-                if (book.Id == 0)
+                if (bookCUvm.Book.Id == 0)
                 {
                     //_dbContext.Book.Add(book);
-                    _unitOfWork.Book.Insert(book);
+                    foreach(var category in bookCUvm.SelectedCategories)
+                    {
+                        bookCUvm.Book.BookCategories.Add(new BookCategory()
+                        {
+                            CategoryId = Int32.Parse(category)
+                        }) ;
+                    }
+                    _unitOfWork.Book.Insert(bookCUvm.Book);
                     TempData["success"] = "Book created succesfully";
                 }
                 else
                 {
                     //_dbContext.Book.Update(book);
-                    _unitOfWork.Book.Update(book);
+                    var selectedCategories = bookCUvm.SelectedCategories.Select(x => Int32.Parse(x)).ToList();
+                    var existingCategories = bookCUvm.Book.BookCategories.Select(x => x.CategoryId).ToList();
+                    var toAdd = selectedCategories.Except(existingCategories).ToList();
+                    var toRemove = existingCategories.Except(selectedCategories).ToList();
+
+                    _unitOfWork.Book.Update(bookCUvm.Book);
                     TempData["success"] = "Book updated succesfully";
                 }
                 //_dbContext.SaveChanges();
