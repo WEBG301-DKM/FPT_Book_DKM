@@ -21,10 +21,21 @@ namespace BookShop1Asm.Controllers
             _webHost = webhost;
         }
 
-        public IActionResult Index()
+        /*public IActionResult Index()
         {
             //List<Book> books = _dbContext.Book.ToList();
             List<Book> books = _unitOfWork.Book.GetAll();
+            return View(books);
+        }*/
+
+        public IActionResult Index(string search)
+        {
+            //List<Book> books = _dbContext.Book.ToList();
+            List<Book> books = _unitOfWork.Book.GetAll();
+            if (!String.IsNullOrEmpty(search))
+            {
+                books =_unitOfWork.Book.Search(search);
+            }
             return View(books);
         }
 

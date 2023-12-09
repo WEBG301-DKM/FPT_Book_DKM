@@ -1,10 +1,10 @@
-﻿/*using BookShop1Asm.Models;
+﻿using BookShop1Asm.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace BookShop1Asm.Areas.Customer.Controllers
 {
-    [Area("Customer")]
+    //[Area("Customer")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -30,4 +30,4 @@ namespace BookShop1Asm.Areas.Customer.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
-}*/
+}

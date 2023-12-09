@@ -20,7 +20,12 @@ namespace BookShop1Asm.Repositories
 
         public List<Book> GetAll()
         {
-            return _context.Book.ToList();
+            return _context.Book.Include("BookCategories.Category").ToList();
+        }
+
+        public List<Book> Search(string str)
+        {
+            return _context.Book.Include("BookCategories.Category").Where(s => s.Name!.Contains(str)).ToList();
         }
 
         public Book GetById(int id)
