@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vnRyzS+29YZ42c2PUJbClMjJq1gjlOXIfJjOGa9MMEo=",
+  "Hash": "gRueEZqJhKcY8BaDzzyEFTfMLt0+1ffSkX6srjpX4no=",
   "Source": "BookShop1Asm",
   "BasePath": "_content/BookShop1Asm",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "E:\\Repos\\FPT_Book_DKM\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\bookcover\\1073f6d7-3f40-459a-b313-04f843f5b0f4.png",
+      "SourceId": "BookShop1Asm",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Repos\\FPT_Book_DKM\\BookShop1Asm\\BookShop1Asm\\wwwroot\\",
+      "BasePath": "_content/BookShop1Asm",
+      "RelativePath": "img/bookcover/1073f6d7-3f40-459a-b313-04f843f5b0f4.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\bookcover\\1073f6d7-3f40-459a-b313-04f843f5b0f4.png"
     },
     {
       "Identity": "E:\\Repos\\FPT_Book_DKM\\BookShop1Asm\\BookShop1Asm\\wwwroot\\js\\site.js",

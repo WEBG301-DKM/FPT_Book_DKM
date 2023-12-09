@@ -8,6 +8,7 @@ namespace BookShop1Asm.Interfaces
         void Insert(Book book);
         void Update(Book book);
         void Delete(Book book);
+        void ResetCategory(Book book);
         Book GetById(int id);
 
     }

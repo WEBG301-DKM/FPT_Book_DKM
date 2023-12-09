@@ -100,28 +100,25 @@ namespace BookShop1Asm.Controllers
                 }
                 else
                 {
-                    //_dbContext.Book.Update(book);
-                    //var selectedCategories = bookCUvm.CatIDs.ToList();
-                    //var existingCategories = bookCUvm.Book.BookCategories.Select(x => x.CategoryId).ToList();
-                    //var toAdd = selectedCategories.Except(existingCategories).ToList();
-                    //var toRemove = existingCategories.Except(selectedCategories).ToList();
-                    //bookCUvm.Book.BookCategories = bookCUvm.Book.BookCategories.Where(x => !toRemove.Contains(x.CategoryId)).ToList();
-                    List<BookCategory> bookCategories = new List<BookCategory>();
-                    bookCUvm.Book.BookCategories.ToList().ForEach(res => bookCategories.Add(res));
-                    _dbContext.BookCategory.RemoveRange(bookCategories);
-                    _dbContext.SaveChanges();
+                    List<BookCategory> oldBookCategories = new List<BookCategory>();
+                    bookCUvm.Book.BookCategories.ToList().ForEach(res => oldBookCategories.Add(res));
+                    bookCUvm.Book.BookCategories.Clear();
+                    _unitOfWork.Book.Update(bookCUvm.Book);
+                    _unitOfWork.Book.ResetCategory(bookCUvm.Book);
+                    
                     if (bookCUvm.CatIDs.Length > 0)
                     {
+                        List<BookCategory> newBookCategories = new List<BookCategory>();
                         foreach (var category in bookCUvm.CatIDs)
                         {
-                            bookCUvm.Book.BookCategories.Add(new BookCategory()
+                            newBookCategories.Add(new BookCategory()
                             {
                                 CategoryId = category,
                                 BookId = bookCUvm.Book.Id
                             });
                         }
+                        _unitOfWork.AddRange(newBookCategories);
                     }
-                    _unitOfWork.Book.Update(bookCUvm.Book);
                     TempData["success"] = "Book updated succesfully";
                 }
                 //_dbContext.SaveChanges();

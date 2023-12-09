@@ -12,6 +12,7 @@ namespace BookShop1Asm.ViewModels.BookViewModel
         [ValidateNever]
         public IEnumerable<SelectListItem> MyCategories { get; set; }
         [Display(Name ="Categories")]
+        [ValidateNever]
         public int[] CatIDs { get; set; }
     }
 }

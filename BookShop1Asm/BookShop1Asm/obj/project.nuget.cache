@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gjALrWK1w0cwU2qU7Wn6wokyasjhWKX3WmJErLo9wldo6bYozpL0GI0+MSHuqOv6wNVi+MadfpVfQshs+Xmkyw==",
+  "dgSpecHash": "9ngntuSmNwQALFb1Zp8wCSrNzMZGzxtvd/kOWkQZOLCubqa8agzwQZ1bvgo/bGrjAIplrL31Bf92UlG3vuOVxQ==",
   "success": true,
   "projectFilePath": "E:\\Repos\\FPT_Book_DKM\\BookShop1Asm\\BookShop1Asm\\BookShop1Asm.csproj",
   "expectedPackageFiles": [
@@ -170,6 +170,7 @@
     "C:\\Users\\Minh\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\Minh\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
     "C:\\Users\\Minh\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Minh\\.nuget\\packages\\system.linq.queryable\\4.3.0\\system.linq.queryable.4.3.0.nupkg.sha512",
     "C:\\Users\\Minh\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
     "C:\\Users\\Minh\\.nuget\\packages\\system.net.http\\4.3.0\\system.net.http.4.3.0.nupkg.sha512",
     "C:\\Users\\Minh\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
