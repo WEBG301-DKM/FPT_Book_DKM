@@ -14,6 +14,8 @@ namespace BookShop1Asm.Models
         public float Price { get; set; }
         [ValidateNever]
         public List<BookCategory> BookCategories { get; set; } = new List<BookCategory>();
+        [ValidateNever]
+        public List<BookAuthor> BookAuthors { get; set; } = new List<BookAuthor>();
 
     }
 }

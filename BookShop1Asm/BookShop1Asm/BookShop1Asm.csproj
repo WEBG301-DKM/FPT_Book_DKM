@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -20,6 +20,7 @@
   <ItemGroup>
     <Folder Include="ViewModels\BookViewModel\" />
     <Folder Include="wwwroot\img\bookcover\" />
+    <Folder Include="wwwroot\img\authorcover\" />
   </ItemGroup>
 
 </Project>

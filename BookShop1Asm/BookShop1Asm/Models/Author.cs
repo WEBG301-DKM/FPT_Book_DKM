@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
 
 namespace BookShop1Asm.Models
 {
@@ -10,5 +11,7 @@ namespace BookShop1Asm.Models
         public string Alias { get; set; }
         public string? Photo { get; set; }
         public string Info { get; set; }
+        [ValidateNever]
+        public List<BookAuthor> BookAuthors { get; set; }
     }
 }

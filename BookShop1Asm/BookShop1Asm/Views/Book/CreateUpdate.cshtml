@@ -22,7 +22,12 @@
     <input asp-for="Book.Price" />
     <span asp-validation-for="Book.Price" class="text-danger"></span>
   </div>
-   <div class="form-group">
+  <div class="form-group">
+    <p>Author</p>
+    @Html.ListBoxFor(model => model.AuIDs, new MultiSelectList(Model.MyAuthors, "Value", "Text"), new{ @class = "form-control", multiple="multiple", id="Au_dropdown"})
+  </div>
+  <div class="form-group">
+    <p>Category</p>
     @Html.ListBoxFor(model => model.CatIDs, new MultiSelectList(Model.MyCategories, "Value", "Text"), new{ @class = "form-control", multiple="multiple", id="Cat_dropdown"})
   </div>
   <div>
@@ -50,6 +55,16 @@
      <script type="text/javascript">
     $(function () {
         $('[id*=Cat_dropdown]').multiselect({
+            includeSelectAllOption: true,
+            templates: {
+                button: '<button type="button" class="multiselect dropdown-toggle" data-bs-toggle="dropdown"><span class="multiselect-selected-text"></span></button>'
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function () {
+        $('[id*=Au_dropdown]').multiselect({
             includeSelectAllOption: true,
             templates: {
                 button: '<button type="button" class="multiselect dropdown-toggle" data-bs-toggle="dropdown"><span class="multiselect-selected-text"></span></button>'

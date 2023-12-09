@@ -8,6 +8,7 @@ namespace BookShop1Asm.Repositories
         private readonly AppDBContext _context;
         private IBook _book;
         private ICategory _category;
+        private IAuthor _author;
 
         public UnitOfWorkRepository(AppDBContext context)
         {
@@ -30,10 +31,14 @@ namespace BookShop1Asm.Repositories
             }
         }
 
-        public void RemoveRange(IEnumerable<object> objects)
+        public IAuthor Author
         {
-            _context.RemoveRange(objects);
+            get
+            {
+                return _author = _author ?? new AuthorRepository(_context);
+            }
         }
+
 
         public void AddRange(IEnumerable<object> objects)
         {

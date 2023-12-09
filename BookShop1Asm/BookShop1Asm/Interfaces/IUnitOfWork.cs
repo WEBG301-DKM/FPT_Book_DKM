@@ -4,8 +4,8 @@
     {
         IBook Book { get; }
         ICategory Category { get; }
+        IAuthor Author { get; }
         void Save();
-        void RemoveRange(IEnumerable<Object> objects);
         void AddRange(IEnumerable<Object> objects);
     }
 }

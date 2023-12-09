@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vnRyzS+29YZ42c2PUJbClMjJq1gjlOXIfJjOGa9MMEo=",
+  "Hash": "o8DC/r/oLDna4b5w8nhzvIB9mRIWhUjOSJYwL8Sg1LQ=",
   "Source": "BookShop1Asm",
   "BasePath": "_content/BookShop1Asm",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "E:\\Repos\\FPT_Book_DKM\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\authorcover\\2bd7ca2a-d4a4-44b6-a45a-039b06b90c2c.jpg",
+      "SourceId": "BookShop1Asm",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Repos\\FPT_Book_DKM\\BookShop1Asm\\BookShop1Asm\\wwwroot\\",
+      "BasePath": "_content/BookShop1Asm",
+      "RelativePath": "img/authorcover/2bd7ca2a-d4a4-44b6-a45a-039b06b90c2c.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\authorcover\\2bd7ca2a-d4a4-44b6-a45a-039b06b90c2c.jpg"
+    },
+    {
+      "Identity": "E:\\Repos\\FPT_Book_DKM\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\bookcover\\2045469a-88f0-4876-abe5-5142e76b5d54.jpg",
+      "SourceId": "BookShop1Asm",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Repos\\FPT_Book_DKM\\BookShop1Asm\\BookShop1Asm\\wwwroot\\",
+      "BasePath": "_content/BookShop1Asm",
+      "RelativePath": "img/bookcover/2045469a-88f0-4876-abe5-5142e76b5d54.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\bookcover\\2045469a-88f0-4876-abe5-5142e76b5d54.jpg"
     },
     {
       "Identity": "E:\\Repos\\FPT_Book_DKM\\BookShop1Asm\\BookShop1Asm\\wwwroot\\js\\site.js",

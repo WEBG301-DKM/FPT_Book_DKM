@@ -10,13 +10,13 @@ namespace BookShop1Asm.Controllers
 {
     public class BookController : Controller
     {
-        private readonly AppDBContext _dbContext;
+        //private readonly AppDBContext _dbContext;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IWebHostEnvironment _webHost;
 
-        public BookController(AppDBContext dbContext, IUnitOfWork unitOfWork, IWebHostEnvironment webhost)
+        public BookController(/*AppDBContext dbContext, */IUnitOfWork unitOfWork, IWebHostEnvironment webhost)
         {
-            _dbContext = dbContext;
+            //_dbContext = dbContext;
             _unitOfWork = unitOfWork;
             _webHost = webhost;
         }
@@ -32,6 +32,11 @@ namespace BookShop1Asm.Controllers
         {
             CreateUpdateVM bookCUvm = new CreateUpdateVM()
             {
+                MyAuthors = _unitOfWork.Author.GetAll().Select(a => new SelectListItem
+                {
+                    Text = a.Alias,
+                    Value = a.Id.ToString()
+                }),
                 MyCategories = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
                 {
                     Text = u.Name,
@@ -39,6 +44,7 @@ namespace BookShop1Asm.Controllers
                 }),
                 Book = new Book()
             };
+            List<int> auIds = new List<int>();
             List<int> catIds = new List<int>();
             if (id == 0)
             {
@@ -50,7 +56,9 @@ namespace BookShop1Asm.Controllers
                 //Update a Book
                 //book = _dbContext.Book.Find(id);
                 bookCUvm.Book = _unitOfWork.Book.GetById(id);
+                bookCUvm.Book.BookAuthors.ToList().ForEach(res => auIds.Add(res.AuthorId));
                 bookCUvm.Book.BookCategories.ToList().ForEach(res => catIds.Add(res.CategoryId));
+                bookCUvm.AuIDs = auIds.ToArray();
                 bookCUvm.CatIDs = catIds.ToArray();
 
                 return View(bookCUvm);
@@ -84,13 +92,24 @@ namespace BookShop1Asm.Controllers
                 if (bookCUvm.Book.Id == 0)
                 {
                     //_dbContext.Book.Add(book);
+                    if (bookCUvm.AuIDs != null && bookCUvm.AuIDs.Length > 0)
+                    {
+                        foreach (var author in bookCUvm.AuIDs)
+                        {
+                            bookCUvm.Book.BookAuthors.Add(new BookAuthor()
+                            {
+                                
+                                AuthorId = author
+                            });
+                        }
+                    }
                     if (bookCUvm.CatIDs != null && bookCUvm.CatIDs.Length > 0)
                     {
                         foreach (var category in bookCUvm.CatIDs)
                         {
                             bookCUvm.Book.BookCategories.Add(new BookCategory()
                             {
-                                BookId = bookCUvm.Book.Id,
+                                
                                 CategoryId = category
                             });
                         }
@@ -100,14 +119,32 @@ namespace BookShop1Asm.Controllers
                 }
                 else
                 {
+                    List<BookAuthor> oldBookAuthors = new List<BookAuthor>();
+                    bookCUvm.Book.BookAuthors.ToList().ForEach(res => oldBookAuthors.Add(res));
+                    bookCUvm.Book.BookAuthors.Clear();
+                    _unitOfWork.Book.ResetCategory(bookCUvm.Book);
+
                     List<BookCategory> oldBookCategories = new List<BookCategory>();
                     bookCUvm.Book.BookCategories.ToList().ForEach(res => oldBookCategories.Add(res));
                     bookCUvm.Book.BookCategories.Clear();
-                    _unitOfWork.Book.Update(bookCUvm.Book);
                     _unitOfWork.Book.ResetCategory(bookCUvm.Book);
 
-                    
-                    
+                    _unitOfWork.Book.Update(bookCUvm.Book);
+
+                    if (bookCUvm.AuIDs != null && bookCUvm.AuIDs.Length > 0)
+                    {
+                        List<BookAuthor> newBookAuthors = new List<BookAuthor>();
+                        foreach (var author in bookCUvm.AuIDs)
+                        {
+                            newBookAuthors.Add(new BookAuthor()
+                            {
+                                BookId = bookCUvm.Book.Id,
+                                AuthorId = author
+                            });
+                        }
+                        _unitOfWork.AddRange(newBookAuthors);
+                    }
+
                     if (bookCUvm.CatIDs != null && bookCUvm.CatIDs.Length > 0)
                     {
                         List<BookCategory> newBookCategories = new List<BookCategory>();
