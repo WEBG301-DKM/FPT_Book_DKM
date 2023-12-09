@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModels\BookViewModel\" />
     <Folder Include="wwwroot\img\bookcover\" />
     <Folder Include="wwwroot\img\authorcover\" />
   </ItemGroup>

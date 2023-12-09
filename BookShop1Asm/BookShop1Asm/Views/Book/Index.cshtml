@@ -15,9 +15,7 @@
          <th>Cover</th>
          <th>Name</th>
          <th>Description</th>
-         <th>Author</th>
          <th>Price</th>
-         <th>Category</th>
      </tr>
  </thead>
  <tbody>
@@ -27,12 +25,11 @@
          <td><img src="@book.Cover" style="max-width:250px;width:100%"/></td>
          <td>@book.Name</td>
          <td>@book.Description</td>
-         <td></td>
          <td>@book.Price</td>
-         <td></td>
 
          <td>
              <div class="btn-group" role="group">
+                 <a asp-controller="Book" asp-action="Details" asp-route-id="@book.Id" asp-items class="btn-primary">Details</a>
                  <a asp-controller="Book" asp-action="CreateUpdate" asp-route-id="@book.Id" asp-items class="btn-primary">Edit</a>
                  <a asp-controller="Book" asp-action="Delete" asp-route-id="@book.Id" class="btn-primary">Delete</a>
              </div>

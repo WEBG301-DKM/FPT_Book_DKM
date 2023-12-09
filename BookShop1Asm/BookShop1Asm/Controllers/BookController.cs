@@ -28,6 +28,12 @@ namespace BookShop1Asm.Controllers
             return View(books);
         }
 
+        public IActionResult Details(int id)
+        {
+            Book book = _unitOfWork.Book.GetById(id);
+            return View(book);
+        }
+
         public IActionResult CreateUpdate(int id)
         {
             CreateUpdateVM bookCUvm = new CreateUpdateVM()
@@ -121,12 +127,10 @@ namespace BookShop1Asm.Controllers
                 {
                     List<BookAuthor> oldBookAuthors = new List<BookAuthor>();
                     bookCUvm.Book.BookAuthors.ToList().ForEach(res => oldBookAuthors.Add(res));
-                    bookCUvm.Book.BookAuthors.Clear();
-                    _unitOfWork.Book.ResetCategory(bookCUvm.Book);
+                    _unitOfWork.Book.ResetAuthor(bookCUvm.Book);
 
                     List<BookCategory> oldBookCategories = new List<BookCategory>();
                     bookCUvm.Book.BookCategories.ToList().ForEach(res => oldBookCategories.Add(res));
-                    bookCUvm.Book.BookCategories.Clear();
                     _unitOfWork.Book.ResetCategory(bookCUvm.Book);
 
                     _unitOfWork.Book.Update(bookCUvm.Book);

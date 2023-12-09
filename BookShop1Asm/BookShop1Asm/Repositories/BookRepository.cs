@@ -25,7 +25,7 @@ namespace BookShop1Asm.Repositories
 
         public Book GetById(int id)
         {
-            return _context.Book.Include("BookCategories.Category").FirstOrDefault(x => x.Id == id);
+            return _context.Book.Include("BookCategories.Category").Include("BookAuthors.Author").FirstOrDefault(x => x.Id == id);
         }
 
         public void Insert(Book book)
