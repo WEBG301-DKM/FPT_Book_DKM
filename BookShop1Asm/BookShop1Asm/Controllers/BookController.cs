@@ -84,7 +84,7 @@ namespace BookShop1Asm.Controllers
                 if (bookCUvm.Book.Id == 0)
                 {
                     //_dbContext.Book.Add(book);
-                    if (bookCUvm.CatIDs.Length > 0)
+                    if (bookCUvm.CatIDs != null && bookCUvm.CatIDs.Length > 0)
                     {
                         foreach (var category in bookCUvm.CatIDs)
                         {
@@ -105,8 +105,10 @@ namespace BookShop1Asm.Controllers
                     bookCUvm.Book.BookCategories.Clear();
                     _unitOfWork.Book.Update(bookCUvm.Book);
                     _unitOfWork.Book.ResetCategory(bookCUvm.Book);
+
                     
-                    if (bookCUvm.CatIDs.Length > 0)
+                    
+                    if (bookCUvm.CatIDs != null && bookCUvm.CatIDs.Length > 0)
                     {
                         List<BookCategory> newBookCategories = new List<BookCategory>();
                         foreach (var category in bookCUvm.CatIDs)
