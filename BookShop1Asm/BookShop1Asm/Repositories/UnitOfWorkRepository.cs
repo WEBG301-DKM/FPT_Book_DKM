@@ -30,6 +30,16 @@ namespace BookShop1Asm.Repositories
             }
         }
 
+        public void RemoveRange(IEnumerable<object> objects)
+        {
+            _context.RemoveRange(objects);
+        }
+
+        public void AddRange(IEnumerable<object> objects)
+        {
+            _context.AddRange(objects);
+        }
+
         public void Save()
         {
             _context.SaveChanges();
