@@ -8,6 +8,6 @@ namespace BookShop1Asm.Interfaces
         void Insert(Author author);
         void Update(Author author);
         void Delete(Author author);
-        Author GetById(int id);
+        Author GetById(int? id);
     }
 }

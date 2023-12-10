@@ -1,16 +1,15 @@
-﻿
-using BookShop1Asm.Interfaces;
+﻿using BookShop1Asm.Interfaces;
 using BookShop1Asm.Models;
 using BookShopAsm.Data;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BookShop1Asm.Controllers
+namespace BookShop1Asm.Areas.Admin.Controllerss
 {
+    [Area("Admin")]
     public class CategoryController : Controller
     {
         //private readonly AppDBContext _dbContext;
         private readonly IUnitOfWork _unitOfWork;
-        //private IMapper _mapper;
         public CategoryController(IUnitOfWork unitOfWork /*, AppDBContext dbContext*/)
         {
             //_dbContext = dbContext;
@@ -20,7 +19,6 @@ namespace BookShop1Asm.Controllers
         public IActionResult Index()
         {
             List<Category> categories = _unitOfWork.Category.GetAll();
-            //var model = _dbContext.Category.ToList();
             return View(categories);
         }
         public IActionResult Create()
@@ -37,7 +35,7 @@ namespace BookShop1Asm.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Edit(int id)
+        public IActionResult Edit(int? id)
         {
             if (id == null || id == 0)
             {
@@ -69,7 +67,7 @@ namespace BookShop1Asm.Controllers
             return View();
         }
 
-        public IActionResult Delete(int id)
+        public IActionResult Delete(int? id)
         {
             if (id == null || id == 0)
             {

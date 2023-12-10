@@ -1,25 +1,27 @@
-﻿using BookShop1Asm.Models;
+﻿using BookShop1Asm.Interfaces;
+using BookShop1Asm.Models;
 using BookShopAsm.Data;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BookShop1Asm.Controllers
+namespace BookShop1Asm.Areas.Admin.Controllerss
 {
+    [Area("Admin")]
     public class AuthorController : Controller
     {
-        private readonly AppDBContext _dbContext;
-        //private readonly IUnitOfWork _unitOfWork;
+        //private readonly AppDBContext _dbContext;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IWebHostEnvironment _webHost;
 
-        public AuthorController(AppDBContext dbContext /*IUnitOfWork unitOfWork*/, IWebHostEnvironment webhost)
+        public AuthorController(/*AppDBContext dbContext, */IUnitOfWork unitOfWork, IWebHostEnvironment webhost)
         {
-            _dbContext = dbContext;
-            //_unitOfWork = unitOfWork;
+            //_dbContext = dbContext;
+            _unitOfWork = unitOfWork;
             _webHost = webhost;
         }
 
         public IActionResult Index()
         {
-            List<Author> authors = _dbContext.Author.ToList();
+            List<Author> authors = _unitOfWork.Author.GetAll();
             return View(authors);
         }
 
@@ -34,7 +36,7 @@ namespace BookShop1Asm.Controllers
             else
             {
                 //Update an Author
-                author= _dbContext.Author.Find(id);
+                author = _unitOfWork.Author.GetById(id);
                 return View(author);
             }
 
@@ -50,7 +52,7 @@ namespace BookShop1Asm.Controllers
                 {
                     string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
                     string authorPath = Path.Combine(wwwRootPath, "img\\authorcover");
-                    if (!String.IsNullOrEmpty(author.Photo))
+                    if (!string.IsNullOrEmpty(author.Photo))
                     {
                         var oldImagePath = Path.Combine(wwwRootPath, author.Photo.TrimStart('\\'));
                         if (System.IO.File.Exists(oldImagePath))
@@ -66,15 +68,15 @@ namespace BookShop1Asm.Controllers
                 }
                 if (author.Id == 0)
                 {
-                    _dbContext.Author.Add(author);
+                    _unitOfWork.Author.Insert(author);
                     TempData["success"] = "Author created succesfully";
                 }
                 else
                 {
-                    _dbContext.Author.Update(author);
+                    _unitOfWork.Author.Update(author);
                     TempData["success"] = "Author updated succesfully";
                 }
-                _dbContext.SaveChanges();
+                _unitOfWork.Save();
                 return RedirectToAction("Index");
             }
 
@@ -88,7 +90,7 @@ namespace BookShop1Asm.Controllers
             {
                 return NotFound();
             }
-            Author? author = _dbContext.Author.Find(id);
+            Author? author = _unitOfWork.Author.GetById(id);
             if (author == null)
             {
                 return NotFound();
@@ -98,7 +100,7 @@ namespace BookShop1Asm.Controllers
         [HttpPost]
         public IActionResult Delete(Author author)
         {
-            if (!String.IsNullOrEmpty(author.Photo))
+            if (!string.IsNullOrEmpty(author.Photo))
             {
                 string wwwRootPath = _webHost.WebRootPath;
                 var oldImagePath = Path.Combine(wwwRootPath, author.Photo.TrimStart('\\'));
@@ -107,8 +109,8 @@ namespace BookShop1Asm.Controllers
                     System.IO.File.Delete(oldImagePath);
                 }
             }
-            _dbContext.Author.Remove(author);
-            _dbContext.SaveChanges();
+            _unitOfWork.Author.Delete(author);
+            _unitOfWork.Save();
             TempData["success"] = "Author deleted succesfully";
             return RedirectToAction("Index");
         }

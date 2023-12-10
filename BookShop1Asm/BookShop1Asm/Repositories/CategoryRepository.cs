@@ -22,7 +22,7 @@ namespace BookShop1Asm.Repositories
             return _context.Category.ToList();
         }
 
-        public Category GetById(int id)
+        public Category GetById(int? id)
         {
             return _context.Category.FirstOrDefault(x => x.Id == id);
         }

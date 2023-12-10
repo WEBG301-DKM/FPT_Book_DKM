@@ -6,8 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Linq;
 
-namespace BookShop1Asm.Controllers
+namespace BookShop1Asm.Areas.Admin.Controllerss
 {
+    [Area("Admin")]
     public class BookController : Controller
     {
         //private readonly AppDBContext _dbContext;
@@ -32,20 +33,20 @@ namespace BookShop1Asm.Controllers
         {
             //List<Book> books = _dbContext.Book.ToList();
             List<Book> books = _unitOfWork.Book.GetAll();
-            if (!String.IsNullOrEmpty(search))
+            if (!string.IsNullOrEmpty(search))
             {
-                books =_unitOfWork.Book.Search(search);
+                books = _unitOfWork.Book.Search(search);
             }
             return View(books);
         }
 
-        public IActionResult Details(int id)
+        public IActionResult Details(int? id)
         {
             Book book = _unitOfWork.Book.GetById(id);
             return View(book);
         }
 
-        public IActionResult CreateUpdate(int id)
+        public IActionResult CreateUpdate(int? id)
         {
             CreateUpdateVM bookCUvm = new CreateUpdateVM()
             {
@@ -92,7 +93,7 @@ namespace BookShop1Asm.Controllers
                 {
                     string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
                     string bookPath = Path.Combine(wwwRootPath, "img\\bookcover");
-                    if (!String.IsNullOrEmpty(bookCUvm.Book.Cover))
+                    if (!string.IsNullOrEmpty(bookCUvm.Book.Cover))
                     {
                         var oldImagePath = Path.Combine(wwwRootPath, bookCUvm.Book.Cover.TrimStart('\\'));
                         if (System.IO.File.Exists(oldImagePath))
@@ -115,7 +116,7 @@ namespace BookShop1Asm.Controllers
                         {
                             bookCUvm.Book.BookAuthors.Add(new BookAuthor()
                             {
-                                
+
                                 AuthorId = author
                             });
                         }
@@ -126,7 +127,7 @@ namespace BookShop1Asm.Controllers
                         {
                             bookCUvm.Book.BookCategories.Add(new BookCategory()
                             {
-                                
+
                                 CategoryId = category
                             });
                         }
@@ -184,7 +185,7 @@ namespace BookShop1Asm.Controllers
 
         }
 
-        public IActionResult Delete(int id)
+        public IActionResult Delete(int? id)
         {
             if (id == null || id == 0)
             {
@@ -201,7 +202,7 @@ namespace BookShop1Asm.Controllers
         [HttpPost]
         public IActionResult Delete(Book book)
         {
-            if (!String.IsNullOrEmpty(book.Cover))
+            if (!string.IsNullOrEmpty(book.Cover))
             {
                 string wwwRootPath = _webHost.WebRootPath;
                 var oldImagePath = Path.Combine(wwwRootPath, book.Cover.TrimStart('\\'));

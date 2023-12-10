@@ -22,7 +22,7 @@ namespace BookShop1Asm.Repositories
             return _context.Author.ToList();
         }
 
-        public Author GetById(int id)
+        public Author GetById(int? id)
         {
             return _context.Author.FirstOrDefault(x => x.Id == id);
         }

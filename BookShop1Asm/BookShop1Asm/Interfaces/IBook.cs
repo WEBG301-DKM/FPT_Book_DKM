@@ -11,7 +11,7 @@ namespace BookShop1Asm.Interfaces
         void Delete(Book book);
         void ResetAuthor(Book book);
         void ResetCategory(Book book);
-        Book GetById(int id);
+        Book GetById(int? id);
 
     }
 }
