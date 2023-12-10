@@ -1,7 +1,7 @@
 ﻿using BookShop1Asm.Interfaces;
 using BookShop1Asm.Models;
 using BookShop1Asm.ViewModels.BookViewModel;
-using BookShopAsm.Data;
+using BookShop1Asm.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Linq;

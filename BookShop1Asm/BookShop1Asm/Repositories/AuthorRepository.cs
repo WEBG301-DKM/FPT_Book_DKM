@@ -1,6 +1,6 @@
 ﻿using BookShop1Asm.Interfaces;
 using BookShop1Asm.Models;
-using BookShopAsm.Data;
+using BookShop1Asm.Data;
 
 namespace BookShop1Asm.Repositories
 {

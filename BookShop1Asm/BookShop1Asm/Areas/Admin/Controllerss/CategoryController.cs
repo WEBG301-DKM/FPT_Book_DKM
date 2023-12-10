@@ -1,6 +1,6 @@
 ﻿using BookShop1Asm.Interfaces;
 using BookShop1Asm.Models;
-using BookShopAsm.Data;
+using BookShop1Asm.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookShop1Asm.Areas.Admin.Controllerss
