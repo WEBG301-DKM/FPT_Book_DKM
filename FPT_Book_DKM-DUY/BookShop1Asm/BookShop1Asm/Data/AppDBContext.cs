@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace BookShop1Asm.Data
 {
-    public class AppDBContext : IdentityDbContext
+    public class AppDBContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Book> Book{ get; set; }
         public DbSet<Category> Category { get; set; }
