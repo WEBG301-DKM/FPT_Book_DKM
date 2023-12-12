@@ -3,7 +3,7 @@ using BookShop1Asm.Models;
 using BookShop1Asm.Data;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BookShop1Asm.Areas.Admin.Controllerss
+namespace BookShop1Asm.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class CategoryController : Controller

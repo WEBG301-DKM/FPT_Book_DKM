@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Linq;
 
-namespace BookShop1Asm.Areas.Admin.Controllerss
+namespace BookShop1Asm.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class BookController : Controller
@@ -64,7 +64,7 @@ namespace BookShop1Asm.Areas.Admin.Controllerss
             };
             List<int> auIds = new List<int>();
             List<int> catIds = new List<int>();
-            if (id == 0)
+            if (id == null ||id == 0)
             {
                 //Create new Book
                 return View(bookCUvm);

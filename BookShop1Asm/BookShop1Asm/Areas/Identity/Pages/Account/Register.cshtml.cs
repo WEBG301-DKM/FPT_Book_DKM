@@ -101,7 +101,7 @@ namespace BookShop1Asm.Areas.Identity.Pages.Account
             [Required]
             [Display(Name = "Fullname")]
             public string Fullname { get; set; }
-            public string? Address { get; set; }
+            public string Address { get; set; }
         }
 
 
@@ -117,7 +117,13 @@ namespace BookShop1Asm.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = CreateUser();
+                //var user = CreateUser();
+                var user = new ApplicationUser
+                {
+                    Fullname = Input.Fullname,
+                    Address = Input.Address,
+
+                };
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
