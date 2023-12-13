@@ -5,14 +5,13 @@ using Microsoft.AspNetCore.Identity;
 
 namespace BookShop1Asm.Data
 {
-    public class AppDBContext : IdentityDbContext
+    public class AppDBContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Book> Book{ get; set; }
         public DbSet<Category> Category { get; set; }
         public DbSet<Author> Author { get; set; }
         public DbSet<BookCategory> BookCategory { get; set; }
         public DbSet<BookAuthor> BookAuthor { get; set; }
-        public DbSet<ApplicationUser> applicationUsers { get; set; }
         public DbSet<Request> Request { get; set; }
         public AppDBContext(DbContextOptions<AppDBContext> options) : base(options)
         {

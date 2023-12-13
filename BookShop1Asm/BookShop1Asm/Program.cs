@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using BookShop1Asm.Utility;
+using BookShop1Asm.Models;
 
 var modelbuilder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +14,7 @@ modelbuilder.Services.AddControllersWithViews();
 
 modelbuilder.Services.AddDbContext<AppDBContext>(options => options.UseSqlServer(modelbuilder.Configuration.GetConnectionString("DefaultConnection")));
 
-modelbuilder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<AppDBContext>().AddDefaultTokenProviders();
+modelbuilder.Services.AddIdentity<ApplicationUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<AppDBContext>().AddDefaultTokenProviders();
 
 //builder.Services.AddScoped<IUnitOfWork, UnitOfWorkRepository>();
 modelbuilder.Services.AddTransient<IUnitOfWork, UnitOfWorkRepository>();
