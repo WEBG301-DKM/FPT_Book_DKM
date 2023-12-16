@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oC+KCZ/c1qjuupe0XLbJQuUsnVv/inHIG4avOV5hEcM=",
+  "Hash": "ep0fzWSVdBf52j5VzS24aX1y1saQDWr7/bRZ22plgvg=",
   "Source": "BookShop1Asm",
   "BasePath": "_content/BookShop1Asm",
   "Mode": "Default",
@@ -1103,6 +1103,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\wwwroot\\img\\authorcover\\8b99b0c1-8b9d-412f-92c3-d3fb9f675c8f.jpg",
+      "SourceId": "BookShop1Asm",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\wwwroot\\",
+      "BasePath": "_content/BookShop1Asm",
+      "RelativePath": "img/authorcover/8b99b0c1-8b9d-412f-92c3-d3fb9f675c8f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\authorcover\\8b99b0c1-8b9d-412f-92c3-d3fb9f675c8f.jpg"
+    },
+    {
+      "Identity": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\wwwroot\\img\\bookcover\\de59563a-98e0-4b03-8be8-e6fc9d8328d5.jpg",
+      "SourceId": "BookShop1Asm",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\wwwroot\\",
+      "BasePath": "_content/BookShop1Asm",
+      "RelativePath": "img/bookcover/de59563a-98e0-4b03-8be8-e6fc9d8328d5.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\bookcover\\de59563a-98e0-4b03-8be8-e6fc9d8328d5.jpg"
     },
     {
       "Identity": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\wwwroot\\js\\site.js",

@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\wwwroot\\img\\authorcover\\8b99b0c1-8b9d-412f-92c3-d3fb9f675c8f.jpg",
+      "PackagePath": "staticwebassets\\img\\authorcover\\8b99b0c1-8b9d-412f-92c3-d3fb9f675c8f.jpg"
+    },
+    {
+      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\wwwroot\\img\\bookcover\\de59563a-98e0-4b03-8be8-e6fc9d8328d5.jpg",
+      "PackagePath": "staticwebassets\\img\\bookcover\\de59563a-98e0-4b03-8be8-e6fc9d8328d5.jpg"
+    },
+    {
       "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
