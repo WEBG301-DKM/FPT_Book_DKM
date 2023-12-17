@@ -10,6 +10,7 @@ namespace BookShop1Asm.Models
         [Required]
         public string CategoryName { get; set; }
         public string CategoryDescription { get; set; }
+        public string? Reason { get; set; }
         [ValidateNever]
         public string UserId { get; set; }
         public int Status { get; set; }

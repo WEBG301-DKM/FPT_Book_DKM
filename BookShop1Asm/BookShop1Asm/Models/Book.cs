@@ -16,6 +16,8 @@ namespace BookShop1Asm.Models
         public List<BookCategory> BookCategories { get; set; } = new List<BookCategory>();
         [ValidateNever]
         public List<BookAuthor> BookAuthors { get; set; } = new List<BookAuthor>();
+        //public List<OrderBook> OrderDetail { get; set; }
+        //public List<CartBook> CartBooks { get; set; }
 
     }
 }

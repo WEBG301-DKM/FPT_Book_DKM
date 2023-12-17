@@ -59,12 +59,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Repos/FPT_Book_DKM/BookShop1Asm/BookShop1Asm/Areas/Admin/Views/Request/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVxdWVzdFxDcmVhdGUuY3NodG1s
+[E:/Repos/FPT_Book_DKM/BookShop1Asm/BookShop1Asm/Areas/Admin/Views/Request/Consider.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVxdWVzdFxDb25zaWRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Repos/FPT_Book_DKM/BookShop1Asm/BookShop1Asm/Areas/Admin/Views/Request/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVxdWVzdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/FPT_Book_DKM/BookShop1Asm/BookShop1Asm/Areas/Admin/Views/Role/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/FPT_Book_DKM/BookShop1Asm/BookShop1Asm/Areas/Admin/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/FPT_Book_DKM/BookShop1Asm/BookShop1Asm/Areas/Admin/Views/User/Manage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxNYW5hZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Repos/FPT_Book_DKM/BookShop1Asm/BookShop1Asm/Areas/Admin/Views/_ViewImports.cshtml]
@@ -249,6 +261,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/Repos/FPT_Book_DKM/BookShop1Asm/BookShop1Asm/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/FPT_Book_DKM/BookShop1Asm/BookShop1Asm/Areas/StoreOwner/Views/Request/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVPd25lclxWaWV3c1xSZXF1ZXN0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/FPT_Book_DKM/BookShop1Asm/BookShop1Asm/Areas/StoreOwner/Views/Request/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVPd25lclxWaWV3c1xSZXF1ZXN0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/FPT_Book_DKM/BookShop1Asm/BookShop1Asm/Areas/StoreOwner/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVPd25lclxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/FPT_Book_DKM/BookShop1Asm/BookShop1Asm/Areas/StoreOwner/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVPd25lclxfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Repos/FPT_Book_DKM/BookShop1Asm/BookShop1Asm/Views/Shared/Error.cshtml]
