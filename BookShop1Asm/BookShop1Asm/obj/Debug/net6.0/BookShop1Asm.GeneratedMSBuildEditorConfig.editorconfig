@@ -71,6 +71,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Repos/FPT_Book_DKM/BookShop1Asm/BookShop1Asm/Areas/Admin/Views/User/ChangePass.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxDaGFuZ2VQYXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Repos/FPT_Book_DKM/BookShop1Asm/BookShop1Asm/Areas/Admin/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

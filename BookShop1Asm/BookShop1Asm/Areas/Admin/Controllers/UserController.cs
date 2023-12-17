@@ -11,6 +11,7 @@ namespace BookShop1Asm.Areas.Admin.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
+
         public UserController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             _roleManager = roleManager;
@@ -19,18 +20,18 @@ namespace BookShop1Asm.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             var users = await _userManager.Users.ToListAsync();
-            var userRolesViewModel = new List<IndexVM>();
+            var userList = new List<IndexVM>();
             foreach (ApplicationUser user in users)
             {
-                var thisViewModel = new IndexVM();
-                thisViewModel.UserId = user.Id;
-                thisViewModel.Email = user.Email;
-                thisViewModel.Fullname = user.Fullname;
-                thisViewModel.Address = user.Address;
-                thisViewModel.Roles = await GetUserRoles(user);
-                userRolesViewModel.Add(thisViewModel);
+                var indexVM = new IndexVM();
+                indexVM.UserId = user.Id;
+                indexVM.Email = user.Email;
+                indexVM.Fullname = user.Fullname;
+                indexVM.Address = user.Address;
+                indexVM.Roles = await GetUserRoles(user);
+                userList.Add(indexVM);
             }
-            return View(userRolesViewModel);
+            return View(userList);
         }
         private async Task<List<string>> GetUserRoles(ApplicationUser user)
         {
@@ -89,6 +90,42 @@ namespace BookShop1Asm.Areas.Admin.Controllers
                 return View(model);
             }
             return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> ChangePass(string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            var model =new ChangePassVM();
+            model.UserId = userId;
+            model.Email = user.Email;
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> ChangePass(ChangePassVM changePassVM)
+        {
+            var user = await _userManager.FindByIdAsync(changePassVM.UserId);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            if (ModelState.IsValid)
+            {
+                //user.PasswordHash = _userManager.PasswordHasher.HashPassword(user, changePassVM.Password.Trim());
+                string code = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+                var result = await _userManager.ResetPasswordAsync(user, code, changePassVM.Password.Trim());
+
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index");
+                }
+
+            }
+            return View(changePassVM);
         }
     }
 }

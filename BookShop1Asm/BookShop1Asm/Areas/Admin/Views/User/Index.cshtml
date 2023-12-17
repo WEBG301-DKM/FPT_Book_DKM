@@ -22,6 +22,9 @@
             <td>
                 <a class="btn btn-primary" asp-controller="User" asp-action="Manage" asp-route-userId="@user.UserId">Manage Roles</a>
             </td>
+            <td>
+                <a class="btn btn-primary" asp-controller="User" asp-action="ChangePass" asp-route-userId="@user.UserId">Reset Pasword</a>
+            </td>
         </tr>
         }
     </tbody>
