@@ -1,11 +1,13 @@
 ﻿using BookShop1Asm.Data;
 using BookShop1Asm.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
 namespace BookShop1Asm.Areas.StoreOwner.Controllers
 {
+    [Authorize(Roles = "StoreOwner")]
     [Area("StoreOwner")]
     public class RequestController : Controller
     {
