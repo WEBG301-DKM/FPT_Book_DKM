@@ -1,0 +1,19 @@
+﻿@model Request
+
+<h1>Create new Category request</h1>
+<form  method="post">
+     
+     <input asp-for="Status" value="1" hidden/>
+  <div class="form-group">
+    <label asp-for="CategoryName">Category Name</label>
+    <input asp-for="CategoryName" />
+  </div>
+  <div class="form-group">
+    <label asp-for="CategoryDescription">Category Description</label>
+    <input asp-for="CategoryDescription" />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <a asp-controller="Request" asp-action="Index" class="btn btn-primary">
+                Back to List
+  </a>
+</form>

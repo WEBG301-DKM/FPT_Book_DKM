@@ -1,0 +1,23 @@
+﻿@model Request
+
+<h1>Accept or Deny request</h1>
+<form  method="post">
+  <input asp-for="Id" hidden />
+  <div class="form-group">
+    <label asp-for="CategoryName">Category Name</label>
+    <input asp-for="CategoryName" readonly/>
+  </div>
+  <div class="form-group">
+    <label asp-for="CategoryDescription">Category Description</label>
+    <input asp-for="CategoryDescription" readonly/>
+  </div>
+  <div class="form-group">
+    <label asp-for="Reason">Reason</label>
+    <input asp-for="Reason" />
+  </div>
+  <button type="submit" class="btn btn-primary" name="Consider" value="accept">Accept</button>
+  <button type="submit" class="btn btn-primary" name="Consider" value="deny">Deny</button>
+  <a asp-controller="Request" asp-action="Index" class="btn btn-primary">
+                Back to List
+  </a>
+</form>
