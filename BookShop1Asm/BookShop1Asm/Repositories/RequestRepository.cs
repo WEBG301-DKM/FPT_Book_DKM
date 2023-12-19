@@ -1,33 +1,40 @@
-﻿using BookShop1Asm.Interfaces;
+﻿using BookShop1Asm.Data;
+using BookShop1Asm.Interfaces;
 using BookShop1Asm.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookShop1Asm.Repositories
 {
     public class RequestRepository : IRequest
     {
+        private readonly AppDBContext _context;
+        public RequestRepository(AppDBContext context)
+        {
+            _context = context;
+        }
         public Request GetById(int? id)
         {
-            throw new NotImplementedException();
+            return _context.Request.Find(id);
         }
 
-        public List<Request> GetOfUser()
+        public List<Request> GetOfUser(string currentUserID)
         {
-            throw new NotImplementedException();
+            return _context.Request.Include("RequestStatus").Where(x => x.UserId == currentUserID).ToList();
         }
 
         public List<Request> GetPending()
         {
-            throw new NotImplementedException();
+            return _context.Request.Where(x => x.StatusId == 1).ToList();
         }
 
-        public void Insert(Request category)
+        public void Insert(Request request)
         {
-            throw new NotImplementedException();
+            _context.Request.Add(request);
         }
 
-        public void Update(Request category)
+        public void Update(Request request)
         {
-            throw new NotImplementedException();
+            _context.Update(request);
         }
     }
 }

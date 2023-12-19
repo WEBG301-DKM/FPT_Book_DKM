@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BookShop1Asm.Models
 {
@@ -13,6 +14,9 @@ namespace BookShop1Asm.Models
         public string? Reason { get; set; }
         [ValidateNever]
         public string UserId { get; set; }
-        public int Status { get; set; }
+        public int StatusId { get; set; }
+        [ForeignKey("StatusId")]
+        [ValidateNever]
+        public RequestStatus RequestStatus { get; set; }
     }
 }

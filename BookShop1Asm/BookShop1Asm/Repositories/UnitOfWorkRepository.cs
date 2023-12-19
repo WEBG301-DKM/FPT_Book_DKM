@@ -9,6 +9,7 @@ namespace BookShop1Asm.Repositories
         private IBook _book;
         private ICategory _category;
         private IAuthor _author;
+        private IRequest _request;
 
         public UnitOfWorkRepository(AppDBContext context)
         {
@@ -36,6 +37,14 @@ namespace BookShop1Asm.Repositories
             get
             {
                 return _author = _author ?? new AuthorRepository(_context);
+            }
+        }
+
+        public IRequest Request
+        {
+            get
+            {
+                return _request = _request ?? new RequestRepository(_context);
             }
         }
 
