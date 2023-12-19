@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\bookcover\\4c3f3c64-4e25-4ad0-a5cd-cea2dd0415b8.jpg",
+      "PackagePath": "staticwebassets\\img\\bookcover\\4c3f3c64-4e25-4ad0-a5cd-cea2dd0415b8.jpg"
+    },
+    {
       "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

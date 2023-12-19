@@ -1,10 +1,12 @@
 ﻿using BookShop1Asm.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace BookShop1Asm.Areas.Customer.Controllers
 {
     [Area("Customer")]
+    //[Authorize(Roles = "Customer")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

@@ -1,5 +1,6 @@
 ﻿using BookShop1Asm.Data;
 using BookShop1Asm.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -7,6 +8,7 @@ using System.Security.Claims;
 namespace BookShop1Asm.Areas.StoreOwner.Controllers
 {
     [Area("StoreOwner")]
+    [Authorize(Roles = "StoreOwner")]
     public class RequestController : Controller
     {
         private readonly AppDBContext _dbContext;
