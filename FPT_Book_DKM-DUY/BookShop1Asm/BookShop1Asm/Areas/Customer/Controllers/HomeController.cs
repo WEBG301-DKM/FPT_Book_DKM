@@ -1,11 +1,9 @@
 ﻿using BookShop1Asm.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace BookShop1Asm.Areas.Customer.Controllers
 {
-    [Authorize(Roles = "Customer")]
     [Area("Customer")]
     public class HomeController : Controller
     {

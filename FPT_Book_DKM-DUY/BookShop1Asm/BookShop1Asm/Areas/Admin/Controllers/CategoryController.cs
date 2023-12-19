@@ -2,11 +2,9 @@
 using BookShop1Asm.Models;
 using BookShop1Asm.Data;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
 
 namespace BookShop1Asm.Areas.Admin.Controllers
 {
-    [Authorize(Roles = "Admin")]
     [Area("Admin")]
     public class CategoryController : Controller
     {

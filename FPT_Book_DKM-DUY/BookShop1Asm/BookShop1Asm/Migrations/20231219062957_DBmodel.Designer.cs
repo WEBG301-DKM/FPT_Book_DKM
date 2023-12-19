@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookShop1Asm.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20231218134629_UpdatAllDb")]
-    partial class UpdatAllDb
+    [Migration("20231219062957_DBmodel")]
+    partial class DBmodel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -5,12 +5,10 @@ using BookShop1Asm.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Linq;
-using Microsoft.AspNetCore.Authorization;
 
-namespace BookShop1Asm.Areas.StoreOwner.Controllers
+namespace BookShop1Asm.Areas.Admin.Controllers
 {
-    [Authorize(Roles = "StoreOwner")]
-    [Area("StoreOwner")]
+    [Area("Admin")]
     public class BookController : Controller
     {
         //private readonly AppDBContext _dbContext;

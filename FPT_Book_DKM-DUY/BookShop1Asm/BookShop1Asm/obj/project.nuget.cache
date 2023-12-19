@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "S40B3yK1rZK94+jXcrAezWQ282WdZ+tzbVl7mte1Zjtm2norftPfTqRrw4P733S1ke4XUdJZtmCpYYIzTysYcg==",
+  "dgSpecHash": "m0N6ZuAD2BK33cz91twWbcqJA9pREkX4eacVz8NeLOE+2xC6aVobdUTTE+Wr9w4h6MvnsioedHclXnYIi2z78w==",
   "success": true,
   "projectFilePath": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\BookShop1Asm.csproj",
   "expectedPackageFiles": [
@@ -84,8 +84,8 @@
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.25\\microsoft.entityframeworkcore.abstractions.6.0.25.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.25\\microsoft.entityframeworkcore.analyzers.6.0.25.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.23\\microsoft.entityframeworkcore.design.6.0.23.nupkg.sha512",
-    "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.25\\microsoft.entityframeworkcore.relational.6.0.25.nupkg.sha512",
-    "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.25\\microsoft.entityframeworkcore.sqlserver.6.0.25.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.23\\microsoft.entityframeworkcore.relational.6.0.23.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.23\\microsoft.entityframeworkcore.sqlserver.6.0.23.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.23\\microsoft.entityframeworkcore.tools.6.0.23.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
