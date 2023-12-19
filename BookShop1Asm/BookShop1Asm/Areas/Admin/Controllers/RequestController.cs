@@ -18,7 +18,7 @@ namespace BookShop1Asm.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            List<Request> requests = _dbContext.Request.ToList();
+            List<Request> requests = _dbContext.Request.Where(x=> x.Status == 1).ToList();
 
             return View(requests);
         }

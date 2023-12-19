@@ -7,14 +7,14 @@
             Add/Remove Roles for User / @ViewBag.Email.
         </div>
         <div class="card-body">
-            @foreach (var role in Model)
+                        @for (int i = 0; i < Model.Count; i++)
             {
                 <div class="form-check m-1">
-                    <input type="hidden" asp-for="@role.RoleId" />
-                    <input type="hidden" asp-for="@role.RoleName" />
-                    <input asp-for="@role.Selected" class="form-check-input" />
-                    <label class="form-check-label" asp-for="@role.Selected">
-                        @role.RoleName
+                    <input type="hidden" asp-for="@Model[i].RoleId" />
+                    <input type="hidden" asp-for="@Model[i].RoleName" />
+                    <input asp-for="@Model[i].Selected" class="form-check-input" />
+                    <label class="form-check-label" asp-for="@Model[i].Selected">
+                        @Model[i].RoleName
                     </label>
                 </div>
             }
