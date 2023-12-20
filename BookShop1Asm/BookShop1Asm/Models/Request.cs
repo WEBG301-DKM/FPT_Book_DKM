@@ -14,6 +14,9 @@ namespace BookShop1Asm.Models
         public string? Reason { get; set; }
         [ValidateNever]
         public string UserId { get; set; }
+        [ForeignKey("UserId")]
+        [ValidateNever]
+        public ApplicationUser ApplicationUser { get; set; }
         public int StatusId { get; set; }
         [ForeignKey("StatusId")]
         [ValidateNever]
