@@ -15,7 +15,7 @@ namespace BookShop1Asm.Areas.Admin.Controllers
         private readonly IUnitOfWork _unitOfWork;
         private readonly IWebHostEnvironment _webHost;
 
-        public BookController(/*AppDBContext dbContext, */IUnitOfWork unitOfWork, IWebHostEnvironment webhost)
+        public BookController(/*AppDBContext dbContext,*/ IUnitOfWork unitOfWork, IWebHostEnvironment webhost)
         {
             //_dbContext = dbContext;
             _unitOfWork = unitOfWork;

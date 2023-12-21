@@ -10,6 +10,7 @@ namespace BookShop1Asm.Repositories
         private ICategory _category;
         private IAuthor _author;
         private IRequest _request;
+        private IOrder _order;
 
         public UnitOfWorkRepository(AppDBContext context)
         {
@@ -48,6 +49,13 @@ namespace BookShop1Asm.Repositories
             }
         }
 
+        public IOrder Order
+        {
+            get
+            {
+                return _order = _order ?? new OrderRepository(_context);
+            }
+        }
 
         public void AddRange(IEnumerable<object> objects)
         {

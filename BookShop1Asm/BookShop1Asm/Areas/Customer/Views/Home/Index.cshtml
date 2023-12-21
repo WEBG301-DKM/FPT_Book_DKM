@@ -1,8 +1,42 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model List<Book>
+<!-- <partial name="_Notification"/> -->
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row pt-4 pb-4">
+    <div class="col-6">
+        <h1>List of Book</h1>
+    </div>
 </div>
+<form asp-controller="Home" asp-action="Index" method="get">
+    <p>
+        Category: @Html.DropDownList("catId", "All")
+        Title: <input type="text" name="search" />
+        <input type="submit" value="Find" />
+    </p>
+</form>
+<table>
+ <thead>
+     <tr>
+         <th>Cover</th>
+         <th>Name</th>
+         <th>Description</th>
+         <th>Price</th>
+     </tr>
+ </thead>
+ <tbody>
+     @foreach(var book in Model)
+     {
+     <tr>
+         <td><img src="@book.Cover" style="max-width:250px;width:100%"/></td>
+         <td>@book.Name</td>
+         <td>@book.Description</td>
+         <td>@book.Price</td>
+
+         <td>
+             <div class="btn-group" role="group">
+                 <a asp-controller="Home" asp-action="Details" asp-route-id="@book.Id" asp-items class="btn-primary">Details</a>
+             </div>
+         </td>
+     </tr>
+     }
+ </tbody>
+</table>

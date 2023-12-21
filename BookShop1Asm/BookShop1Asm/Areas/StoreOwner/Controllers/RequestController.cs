@@ -10,11 +10,11 @@ namespace BookShop1Asm.Areas.StoreOwner.Controllers
     [Area("StoreOwner")]
     public class RequestController : Controller
     {
-        private readonly AppDBContext _dbContext;
+        //private readonly AppDBContext _dbContext;
         private readonly IUnitOfWork _unitOfWork;
-        public RequestController(AppDBContext dbContext, IUnitOfWork unitOfWork)
+        public RequestController(/*AppDBContext dbContext,*/ IUnitOfWork unitOfWork)
         {
-            _dbContext = dbContext;
+            //_dbContext = dbContext;
             _unitOfWork = unitOfWork;
         }
 

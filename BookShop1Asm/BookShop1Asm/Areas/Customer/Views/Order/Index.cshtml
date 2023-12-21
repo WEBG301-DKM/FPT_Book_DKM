@@ -1,0 +1,62 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> UserManager
+@model List<Order>
+
+<div class="row pt-4 pb-4">
+    <h2>Profile</h2>
+    <div class="col-6">
+        <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Email:
+        </dt>
+        <dd class = "col-sm-10">
+            @UserManager.GetUserAsync(User).Result?.Email
+        </dd>
+        <dt class = "col-sm-2">
+            Name
+        </dt>
+        <dd class = "col-sm-10">
+            @UserManager.GetUserAsync(User).Result?.Fullname
+        </dd>
+        <dt class = "col-sm-2">
+            Address
+        </dt>
+        <dd class = "col-sm-10">
+            @UserManager.GetUserAsync(User).Result?.Address
+        </dd>
+        <dt class = "col-sm-2">
+            <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage" class="btn btn-primary">Edit Profile</a>
+        </dt>
+    </dl>
+    </div>
+</div>
+
+<h2>Orders</h2>
+<table>
+ <thead>
+     <tr>
+         <th>Order No.</th>
+         <th>BookID</th>
+         <th>Book Cover</th>
+         <th>Book Title</th>
+         <th>Price</th>
+         <th>Quantity</th>
+         <th>Total</th>
+     </tr>
+ </thead>
+ <tbody>
+     @foreach(var order in Model)
+     {
+     <tr>
+         <td>@order.Id</td>
+         <td>@order.BookId</td>
+         <td><img src="@order.Book.Cover" style="max-width:250px;width:100%"/></td>
+         <td>@order.Book.Name</td>
+         <td>@order.Book.Price</td>
+         <td>@order.Quantity</td>
+         <td>@order.Total</td>
+     </tr>
+     }
+ </tbody>
+</table>

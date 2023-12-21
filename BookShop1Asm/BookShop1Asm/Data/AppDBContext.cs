@@ -13,7 +13,8 @@ namespace BookShop1Asm.Data
         public DbSet<BookCategory> BookCategory { get; set; }
         public DbSet<BookAuthor> BookAuthor { get; set; }
         public DbSet<Request> Request { get; set; }
-        
+        public DbSet<Order> Order { get; set; }
+
 
         public AppDBContext(DbContextOptions<AppDBContext> options) : base(options)
         {

@@ -1,0 +1,32 @@
+﻿
+
+@model List<Order>
+
+<h1>List of Orders</h1>
+<table>
+ <thead>
+     <tr>
+         <th>Order No.</th>
+         <th>UserEmail</th>
+         <th>BoodId</th>
+         <th>BookName</th>
+         <th>Price</th>
+         <th>Quantity</th>
+         <th>Total</th>
+     </tr>
+ </thead>
+ <tbody>
+     @foreach(var order in Model)
+     {
+     <tr>
+         <td>@order.Id</td>
+         <td>@order.ApplicationUser.Email<td>
+         <td>@order.BookId</td>
+         <td>@order.Book.Name<td>
+         <td>@order.Book.Price<td>
+         <td>@order.Quantity<td>
+         <td>@order.Total<td>
+      </tr>
+     }
+ </tbody>
+</table>

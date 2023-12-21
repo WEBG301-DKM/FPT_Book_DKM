@@ -6,6 +6,7 @@
         ICategory Category { get; }
         IAuthor Author { get; }
         IRequest Request { get; }
+        IOrder Order { get; }
         void Save();
         void AddRange(IEnumerable<Object> objects);
     }
