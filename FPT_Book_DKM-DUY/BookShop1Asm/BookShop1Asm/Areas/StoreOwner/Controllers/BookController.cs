@@ -31,7 +31,7 @@ namespace BookShop1Asm.Areas.StoreOwner.Controllers
             return View(books);
         }*/
 
-        public IActionResult Index(string search)
+        public IActionResult Index(string search, int catId = 0)
         {
             //List<Book> books = _dbContext.Book.ToList();
             List<Book> books = _unitOfWork.Book.GetAll();
