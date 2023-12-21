@@ -3,26 +3,26 @@
 <h1>List of Request</h1>
 
 <p>
-    <a asp-controllder="Request" asp-action="Create" class="btn btn-primary">Create Request for new category</a>
+    <a asp-controller="Request" asp-action="Create" class="btn btn-primary">Create Request for new category</a>
 </p>
-<table>
- <thead>
-     <tr>
-         <th>Name</th>
-         <th>Description</th>
-         <th>Status</th>
-         <th>Reason</th>
-     </tr>
- </thead>
- <tbody>
-     @foreach(var request in Model)
-     {
-     <tr>
-         <td>@request.CategoryName</td>
-         <td>@request.CategoryDescription<td>
-         <td>@request.RequestStatus.Status</td>
-         <td>@request.Reason<td>
-      </tr>
-     }
- </tbody>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Reason</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var request in Model)
+        {
+            <tr>
+                <td>@request.CategoryName</td>
+                <td>@request.CategoryDescription</td>
+                <td>@request.RequestStatus.Status</td>
+                <td>@request.Reason</td>
+            </tr>
+        }
+    </tbody>
 </table>

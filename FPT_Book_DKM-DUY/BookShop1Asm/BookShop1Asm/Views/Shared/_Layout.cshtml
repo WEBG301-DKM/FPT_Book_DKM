@@ -1,41 +1,28 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - BookShop1Asm</title>
 
-    <!--
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-   
-    <script type="text/javascript" src="~/lib/bootstrap/dist/bootstrap-multiselect.js"></script>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/bootstrap-multiselect.css" />
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
-    -->
-
-     <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css' />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
-     <script type="text/javascript" src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js'></script>
-     <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.bundle.min.js'></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
-
+    <!-- Bootstrap and Custom CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BookShop1Asm.styles.css" asp-append-version="true" />
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3pVYMJ2f/gymc5gi2zFZU7lGcewCnO4Y3T35LXGJ4A69HwCX3/IQki3bD4" crossorigin="anonymous">
 
+
+    <!-- jQuery and Bootstrap JS -->
+    <script type="text/javascript" src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js'></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.bundle.min.js'></script>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <!-- Navigation bar with custom styling -->
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light navbar-custom mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BookShop1Asm</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FPT Book</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -50,9 +37,9 @@
                         </li>
                         @if (User.IsInRole("StoreOwner"))
                         {
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="StoreOwner" asp-controller="Book" asp-action="Index">Book</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="StoreOwner" asp-controller="Book" asp-action="Index">Book</a>
+                            </li>
 
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="StoreOwner" asp-controller="Author" asp-action="Index">Author</a>
@@ -61,7 +48,7 @@
                                 <a class="nav-link text-dark" asp-area="StoreOwner" asp-controller="Request" asp-action="Index">Request(Owner)</a>
                             </li>
                         }
-                         @if (User.IsInRole("Admin"))
+                        @if (User.IsInRole("Admin"))
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
@@ -77,26 +64,26 @@
                             </li>
                         }
                         <li class="nav-item">
-                                <partial name="_LoginPartial" />
+                            <partial name="_LoginPartial" />
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+    <!-- Main content area -->
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
+    <!-- Footer with custom styling -->
+    <footer class="border-top footer text-muted footer-custom">
         <div class="container">
-            &copy; 2023 - BookShop1Asm - <a asp-area="Customer" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - BookShop1Asm - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-    
-    <!-- <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
+
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

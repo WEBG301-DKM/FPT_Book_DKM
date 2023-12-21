@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "klspPqVcDTH6Lz+B4Jdxurgg15uKnCM3pV25YpBXaEo=",
+  "Hash": "UF3aFrsnyh8v6uKPWK+IOZgib/ica2jUVOEI9xMn4rg=",
   "Source": "BookShop1Asm",
   "BasePath": "_content/BookShop1Asm",
   "Mode": "Default",
@@ -1103,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\authorcover\\3527640e-6a99-45cf-9859-78e98fb12a70.jpg",
+      "SourceId": "BookShop1Asm",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\",
+      "BasePath": "_content/BookShop1Asm",
+      "RelativePath": "img/authorcover/3527640e-6a99-45cf-9859-78e98fb12a70.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\authorcover\\3527640e-6a99-45cf-9859-78e98fb12a70.jpg"
     },
     {
       "Identity": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\bookcover\\bf7978f2-5581-48bb-85d5-99b5c893475a.jpg",
