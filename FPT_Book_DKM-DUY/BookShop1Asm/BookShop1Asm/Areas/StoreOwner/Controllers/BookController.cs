@@ -34,10 +34,15 @@ namespace BookShop1Asm.Areas.StoreOwner.Controllers
         public IActionResult Index(string search, int catId = 0)
         {
             //List<Book> books = _dbContext.Book.ToList();
+            ViewBag.catId = new SelectList(_unitOfWork.Category.GetAll(), "Id", "Name");
             List<Book> books = _unitOfWork.Book.GetAll();
             if (!string.IsNullOrEmpty(search))
             {
                 books = _unitOfWork.Book.Search(search);
+            }
+            if (catId != 0)
+            {
+                books = books.Where(v => v.BookCategories.Select(c => c.CategoryId).Contains(catId)).ToList();
             }
             return View(books);
         }

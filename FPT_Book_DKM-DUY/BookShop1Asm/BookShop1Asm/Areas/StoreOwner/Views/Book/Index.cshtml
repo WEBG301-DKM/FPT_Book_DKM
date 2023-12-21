@@ -11,6 +11,7 @@
 </div>
 <form asp-controller="Book" asp-action="Index" method="get">
     <p>
+        Category: @Html.DropDownList("catId", "All")
         Title: <input type="text" name="search" />
         <input type="submit" value="Find" />
     </p>
