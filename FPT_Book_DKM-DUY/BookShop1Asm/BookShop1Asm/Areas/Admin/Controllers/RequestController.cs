@@ -1,4 +1,5 @@
 ﻿using BookShop1Asm.Data;
+using BookShop1Asm.Interfaces;
 using BookShop1Asm.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -12,37 +13,20 @@ namespace BookShop1Asm.Areas.Admin.Controllers
     [Authorize(Roles = "Admin")]
     public class RequestController : Controller
     {
-        private readonly AppDBContext _dbContext;
-        public RequestController(AppDBContext dbContext)
+        //private readonly AppDBContext _dbContext;
+        private readonly IUnitOfWork _unitOfWork;
+        public RequestController(/*AppDBContext dbContext,*/ IUnitOfWork unitOfWork)
         {
-            _dbContext = dbContext;
+
+            //_dbContext = dbContext;
+            _unitOfWork = unitOfWork;
         }
 
         public IActionResult Index()
         {
-            List<Request> requests = _dbContext.Request.Where(x => x.Status == 1).ToList();
+            List<Request> requests = _unitOfWork.Request.GetPending();
 
             return View(requests);
-        }
-        public IActionResult Create()
-        {
-            return View();
-        }
-        [HttpPost]
-        public IActionResult Create(Request request)
-        {
-            if (ModelState.IsValid)
-            {
-                ClaimsPrincipal currentUser = this.User;
-                var currentUserID = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
-                request.UserId = currentUserID;
-                _dbContext.Request.Add(request);
-                _dbContext.SaveChanges();
-                //_unitOfWork.Request.Insert(category);
-                //_unitOfWork.Save();
-                return RedirectToAction("Index");
-            }
-            return View();
         }
         public IActionResult Consider(int id)
         {
@@ -52,7 +36,7 @@ namespace BookShop1Asm.Areas.Admin.Controllers
             }
             else
             {
-                Request request = _dbContext.Request.Find(id);
+                Request request = _unitOfWork.Request.GetById(id);
                 return View(request);
             }
            
@@ -69,17 +53,20 @@ namespace BookShop1Asm.Areas.Admin.Controllers
                         Name = request.CategoryName,
                         Description = request.CategoryDescription
                     };
-                    _dbContext.Category.Add(category);
-                    request.Status = 2;
-                    _dbContext.Request.Update(request);
-                    
+                    //_dbContext.Category.Add(category);
+                    _unitOfWork.Category.Insert(category);
+                    request.StatusId = 2;
+                    //_dbContext.Request.Update(request);
+                    _unitOfWork.Request.Update(request);
+
                 }
                 if (Consider == "deny")
                 {
-                    request.Status = 3;
-                    _dbContext.Request.Update(request);
+                    request.StatusId = 3;
+                    //_dbContext.Request.Update(request);
+                    _unitOfWork.Request.Update(request);
                 }
-                _dbContext.SaveChanges();
+                _unitOfWork.Save();
                 return RedirectToAction("Index");
             }
             return View();
