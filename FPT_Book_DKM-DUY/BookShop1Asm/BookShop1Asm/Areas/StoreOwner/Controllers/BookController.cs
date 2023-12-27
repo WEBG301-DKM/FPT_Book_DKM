@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 
-namespace BookShop1Asm.Areas.StoreOwner.Controllers
+namespace BookShop1Asm.Areas.Admin.Controllers
 {
     [Area("StoreOwner")]
     [Authorize(Roles = "StoreOwner")]
@@ -17,7 +17,7 @@ namespace BookShop1Asm.Areas.StoreOwner.Controllers
         private readonly IUnitOfWork _unitOfWork;
         private readonly IWebHostEnvironment _webHost;
 
-        public BookController(/*AppDBContext dbContext, */IUnitOfWork unitOfWork, IWebHostEnvironment webhost)
+        public BookController(/*AppDBContext dbContext,*/ IUnitOfWork unitOfWork, IWebHostEnvironment webhost)
         {
             //_dbContext = dbContext;
             _unitOfWork = unitOfWork;
@@ -31,9 +31,10 @@ namespace BookShop1Asm.Areas.StoreOwner.Controllers
             return View(books);
         }*/
 
-        public IActionResult Index(string search, int catId = 0)
+        public IActionResult Index(string search, int catId=0)
         {
             //List<Book> books = _dbContext.Book.ToList();
+
             ViewBag.catId = new SelectList(_unitOfWork.Category.GetAll(), "Id", "Name");
             List<Book> books = _unitOfWork.Book.GetAll();
             if (!string.IsNullOrEmpty(search))
@@ -42,7 +43,7 @@ namespace BookShop1Asm.Areas.StoreOwner.Controllers
             }
             if (catId != 0)
             {
-                books = books.Where(v => v.BookCategories.Select(c => c.CategoryId).Contains(catId)).ToList();
+                books= books.Where(v => v.BookCategories.Select(c => c.CategoryId).Contains(catId)).ToList();
             }
             return View(books);
         }

@@ -39,6 +39,7 @@ namespace BookShop1Asm.Repositories
                 return _author = _author ?? new AuthorRepository(_context);
             }
         }
+
         public IRequest Request
         {
             get
@@ -46,7 +47,6 @@ namespace BookShop1Asm.Repositories
                 return _request = _request ?? new RequestRepository(_context);
             }
         }
-
 
         public void AddRange(IEnumerable<object> objects)
         {

@@ -1,7 +1,16 @@
 ﻿@model List<BookShop1Asm.ViewModels.UserRolesViewModel.IndexVM>
 
+<style>
+    /* Add custom CSS to style the table borders */
+    .table-bordered th,
+    .table-bordered td {
+        border: 1px solid #dee2e6 !important; /* Specify your desired border color and width here */
+    }
+</style>
+
 <h1>User Roles</h1>
-<table class="table table-striped">
+<!-- Add the 'table-bordered' class to your table element -->
+<table class="table table-striped table-bordered">
     <thead>
         <tr>
             <th>Email</th>
@@ -9,24 +18,24 @@
             <th>Name</th>
             <th>Address</th>
             <th>Action</th>
-            <th>Password</th>
+            <th>ChangePassword</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var user in Model)
         {
-        <tr>
-            <td>@user.Email</td>
-            <td>@string.Join(" , ", user.Roles.ToList())</td>
-            <td>@user.Fullname</td>
-            <td>@user.Address</td>
-            <td>
-                <a class="btn btn-primary" asp-controller="User" asp-action="Manage" asp-route-userId="@user.UserId">Manage Roles</a>
-            </td>
-            <td>
-                <a class="btn btn-primary" asp-controller="User" asp-action="ChangePass" asp-route-userId="@user.UserId">Reset Pasword</a>
-            </td>
-        </tr>
+            <tr>
+                <td>@user.Email</td>
+                <td>@string.Join(", ", user.Roles.ToList())</td>
+                <td>@user.Fullname</td>
+                <td>@user.Address</td>
+                <td>
+                    <a class="btn btn-primary" asp-controller="User" asp-action="Manage" asp-route-userId="@user.UserId">Manage Roles</a>
+                </td>
+                <td>
+                    <a class="btn btn-primary" asp-controller="User" asp-action="ChangePass" asp-route-userId="@user.UserId">Reset Password</a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>

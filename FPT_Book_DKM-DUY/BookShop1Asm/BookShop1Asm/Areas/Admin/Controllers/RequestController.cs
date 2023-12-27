@@ -2,10 +2,7 @@
 using BookShop1Asm.Interfaces;
 using BookShop1Asm.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Security.Claims;
 
 namespace BookShop1Asm.Areas.Admin.Controllers
 {
@@ -17,7 +14,6 @@ namespace BookShop1Asm.Areas.Admin.Controllers
         private readonly IUnitOfWork _unitOfWork;
         public RequestController(/*AppDBContext dbContext,*/ IUnitOfWork unitOfWork)
         {
-
             //_dbContext = dbContext;
             _unitOfWork = unitOfWork;
         }
@@ -58,7 +54,7 @@ namespace BookShop1Asm.Areas.Admin.Controllers
                     request.StatusId = 2;
                     //_dbContext.Request.Update(request);
                     _unitOfWork.Request.Update(request);
-
+                    
                 }
                 if (Consider == "deny")
                 {

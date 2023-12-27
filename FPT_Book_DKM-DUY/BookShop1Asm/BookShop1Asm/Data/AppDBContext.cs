@@ -13,7 +13,8 @@ namespace BookShop1Asm.Data
         public DbSet<BookCategory> BookCategory { get; set; }
         public DbSet<BookAuthor> BookAuthor { get; set; }
         public DbSet<Request> Request { get; set; }
-        
+
+
 
         public AppDBContext(DbContextOptions<AppDBContext> options) : base(options)
         {
@@ -31,12 +32,13 @@ namespace BookShop1Asm.Data
             modelBuilder.Entity<BookAuthor>().HasKey(bc => new { bc.BookId, bc.AuthorId });
             modelBuilder.Entity<BookAuthor>().HasOne(bc => bc.Book).WithMany(bc => bc.BookAuthors).HasForeignKey(b => b.BookId);
             modelBuilder.Entity<BookAuthor>().HasOne(bc => bc.Author).WithMany(bc => bc.BookAuthors).HasForeignKey(b => b.AuthorId);
+
             modelBuilder.Entity<RequestStatus>().HasData
-             (
-              new RequestStatus { Id = 1, Status = "Pending" },
-              new RequestStatus { Id = 2, Status = "Accept" },
-              new RequestStatus { Id = 3, Status = "Deny" }
-             );
+                (
+                 new RequestStatus { Id = 1, Status = "Pending"},
+                 new RequestStatus { Id = 2, Status = "Accept"},
+                 new RequestStatus { Id = 3, Status = "Deny"}
+                );
         }
     }
 }

@@ -502,6 +502,18 @@ E:\ASP net\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\refint\BookShop1Asm.dll
 E:\ASP net\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.pdb
 E:\ASP net\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.genruntimeconfig.cache
 E:\ASP net\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\ref\BookShop1Asm.dll
+D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.csproj.AssemblyReference.cache
+D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.AssemblyInfoInputs.cache
+D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.AssemblyInfo.cs
+D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.csproj.CoreCompileInputs.cache
+D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.MvcApplicationPartsAssemblyInfo.cs
+D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.MvcApplicationPartsAssemblyInfo.cache
+D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.RazorAssemblyInfo.cache
+D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.RazorAssemblyInfo.cs
+D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.dll
+D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\refint\BookShop1Asm.dll
+D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.pdb
 D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\bin\Debug\net6.0\appsettings.Development.json
 D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\bin\Debug\net6.0\appsettings.json
 D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\bin\Debug\net6.0\BookShop1Asm.staticwebassets.runtime.json
@@ -734,15 +746,6 @@ D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\bin\Debug\net6
 D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.csproj.AssemblyReference.cache
-D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.GeneratedMSBuildEditorConfig.editorconfig
-D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.AssemblyInfoInputs.cache
-D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.AssemblyInfo.cs
-D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.csproj.CoreCompileInputs.cache
-D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.MvcApplicationPartsAssemblyInfo.cs
-D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.MvcApplicationPartsAssemblyInfo.cache
-D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.RazorAssemblyInfo.cache
-D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.RazorAssemblyInfo.cs
 D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\staticwebassets\msbuild.BookShop1Asm.Microsoft.AspNetCore.StaticWebAssets.props
 D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\staticwebassets\msbuild.build.BookShop1Asm.props
 D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.BookShop1Asm.props
@@ -754,8 +757,5 @@ D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6
 D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\scopedcss\bundle\BookShop1Asm.styles.css
 D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\scopedcss\projectbundle\BookShop1Asm.bundle.scp.css
 D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.csproj.CopyComplete
-D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.dll
-D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\refint\BookShop1Asm.dll
-D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.pdb
 D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\BookShop1Asm.genruntimeconfig.cache
 D:\Github\FPT_Book_DKM\FPT_Book_DKM-DUY\BookShop1Asm\BookShop1Asm\obj\Debug\net6.0\ref\BookShop1Asm.dll

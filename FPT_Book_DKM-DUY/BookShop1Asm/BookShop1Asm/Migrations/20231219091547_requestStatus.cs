@@ -4,7 +4,7 @@
 
 namespace BookShop1Asm.Migrations
 {
-    public partial class requestFKToUser : Migration
+    public partial class requestStatus : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,6 +12,14 @@ namespace BookShop1Asm.Migrations
                 name: "Status",
                 table: "Request",
                 newName: "StatusId");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "Reason",
+                table: "Request",
+                type: "nvarchar(max)",
+                nullable: true,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(max)");
 
             migrationBuilder.CreateTable(
                 name: "RequestStatus",
@@ -72,6 +80,16 @@ namespace BookShop1Asm.Migrations
                 name: "StatusId",
                 table: "Request",
                 newName: "Status");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "Reason",
+                table: "Request",
+                type: "nvarchar(max)",
+                nullable: false,
+                defaultValue: "",
+                oldClrType: typeof(string),
+                oldType: "nvarchar(max)",
+                oldNullable: true);
         }
     }
 }

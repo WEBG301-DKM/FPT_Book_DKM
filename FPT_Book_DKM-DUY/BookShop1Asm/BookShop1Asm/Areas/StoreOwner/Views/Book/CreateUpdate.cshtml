@@ -1,36 +1,44 @@
 ﻿@model BookShop1Asm.ViewModels.BookViewModel.CreateUpdateVM
+<head>
+    <!-- Include Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2/dist/css/select2.min.css" rel="stylesheet" />
 
-<h1>@(Model.Book.Id == 0 ? "Create" : "Update") Book</h1>
-<form method="post" enctype="multipart/form-data">
-    <input asp-for="Book.Id" hidden />
-    <input asp-for="Book.Cover" hidden />
+    <!-- Include Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2/dist/js/select2.full.min.js"></script>
+
+</head>
+
+<h1>@(Model.Book.Id==0 ?"Create":"Update") Book</h1>
+<form  method="post" enctype="multipart/form-data">
+  <input asp-for="Book.Id" hidden />
+  <input asp-for="Book.Cover" hidden/>
+  <div class="form-group">
+    <img src="@Model.Book.Cover" style="max-width:250px;width:100%"/>
+  </div>
+  <div class="form-group">
+    <label asp-for="Book.Name">Title</label>
+    <input asp-for="Book.Name" />
+    <span asp-validation-for="Book.Name" class="text-danger"></span>
+  </div>
+  <div class="form-group">
+    <label asp-for="Book.Description">Desc</label>
+    <input asp-for="Book.Description" />
+    <span asp-validation-for="Book.Description" class="text-danger"></span>
+  </div>
+  <div class="form-group">
+    <label asp-for="Book.Price">Price</label>
+    <input asp-for="Book.Price" />
+    <span asp-validation-for="Book.Price" class="text-danger"></span>
+  </div>
     <div class="form-group">
-        <img src="@Model.Book.Cover" class="img-fluid" style="max-width:250px;" />
+        <p>Author</p>
+        <select id="Au_dropdown" class="form-control select2-multiple" asp-for="AuIDs" asp-items="Model.MyAuthors" multiple="multiple"></select>
     </div>
-    <div class="form-group mb-3">
-        <label asp-for="Book.Name" class="form-label">Title</label>
-        <input asp-for="Book.Name" class="form-control" placeholder="Enter book title" />
-        <span asp-validation-for="Book.Name" class="text-danger"></span>
+    <div class="form-group">
+        <p>Category</p>
+        <select id="Cat_dropdown" class="form-control select2-multiple" asp-for="CatIDs" asp-items="Model.MyCategories" multiple="multiple"></select>
     </div>
-    <div class="form-group mb-3">
-        <label asp-for="Book.Description" class="form-label">Description</label>
-        <textarea asp-for="Book.Description" class="form-control" rows="3" placeholder="Enter book description"></textarea>
-        <span asp-validation-for="Book.Description" class="text-danger"></span>
-    </div>
-    <div class="form-group mb-3">
-        <label asp-for="Book.Price" class="form-label">Price</label>
-        <input asp-for="Book.Price" class="form-control" type="number" min="0" step="0.01" placeholder="0.00" />
-        <span asp-validation-for="Book.Price" class="text-danger"></span>
-    </div>
-  <div class="form-group">
-    <p>Author</p>
-    <select id="Au_dropdown" class="form-control" asp-for="AuIDs" asp-items="Model.MyAuthors" multiple></select>
-  </div>
-  <div class="form-group">
-    <p>Category</p>
-    <select id="Cat_dropdown" class="form-control" asp-for="CatIDs" asp-items="Model.MyCategories" multiple></select>
-  </div>
-  <div>
+
     <label asp-for="Book.Cover"></label>
     <input type="file" name="file" class="form-control">
   </div>
@@ -51,26 +59,14 @@
 </form>
 
 
-@section Scripts{
+@section Scripts {
     <script type="text/javascript">
-    $(function () {
-        $('[id*=Au_dropdown]').multiselect({
-            includeSelectAllOption: true,
-            templates: {
-                button: '<button type="button" class="multiselect dropdown-toggle" data-bs-toggle="dropdown"><span class="multiselect-selected-text"></span></button>'
-            }
+        $(document).ready(function () {
+            $('.select2-multiple').select2({
+                placeholder: "Select options", // This can be any placeholder text
+                allowClear: true
+            });
         });
-    });
-</script>
-     <script type="text/javascript">
-    $(function () {
-        $('[id*=Cat_dropdown]').multiselect({
-            includeSelectAllOption: true,
-            templates: {
-                button: '<button type="button" class="multiselect dropdown-toggle" data-bs-toggle="dropdown"><span class="multiselect-selected-text"></span></button>'
-            }
-        });
-    });
-</script>
-    <partial name="_ValidationScriptsPartial"/>
+    </script>
+    <partial name="_ValidationScriptsPartial" />
 }

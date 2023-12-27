@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookShop1Asm.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20231221043903_requestFKToUser")]
-    partial class requestFKToUser
+    [Migration("20231219091547_requestStatus")]
+    partial class requestStatus
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

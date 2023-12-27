@@ -26,6 +26,7 @@ namespace BookShop1Asm.Areas.StoreOwner.Controllers
             var currentUserID = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
             //List<Request> requests = _dbContext.Request.Where(x => x.UserId == currentUserID).ToList();
             List<Request> requests = _unitOfWork.Request.GetOfUser(currentUserID);
+
             return View(requests);
         }
         public IActionResult Create()
@@ -37,6 +38,7 @@ namespace BookShop1Asm.Areas.StoreOwner.Controllers
         {
             ClaimsPrincipal currentUser = this.User;
             var currentUserID = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+            request.UserId = currentUserID;
             request.StatusId = 1;
             //_dbContext.Request.Add(request);
             //_dbContext.SaveChanges();
