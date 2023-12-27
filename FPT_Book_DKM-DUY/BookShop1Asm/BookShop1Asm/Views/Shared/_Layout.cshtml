@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BookShop1Asm.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3pVYMJ2f/gymc5gi2zFZU7lGcewCnO4Y3T35LXGJ4A69HwCX3/IQki3bD4" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
 
     <!-- jQuery and Bootstrap JS -->
     <script type="text/javascript" src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js'></script>
@@ -35,6 +35,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="Customer" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        @if(User.IsInRole("Customer")){
+                              <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="Customer" asp-controller="Cart" asp-action="Index">Cart</a>
+                        </li>
+                        }
                         @if (User.IsInRole("StoreOwner"))
                         {
                             <li class="nav-item">
@@ -74,6 +79,7 @@
     <!-- Main content area -->
     <div class="container">
         <main role="main" class="pb-3">
+            <partial name="_Notification" />
             @RenderBody()
         </main>
     </div>

@@ -1,267 +1,279 @@
 {
   "Files": [
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BookShop1Asm.bundle.scp.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BookShop1Asm.bundle.scp.css",
       "PackagePath": "staticwebassets\\BookShop1Asm.bundle.scp.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\css\\site.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\css\\cart.css",
+      "PackagePath": "staticwebassets\\css\\cart.css"
+    },
+    {
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\favicon.ico",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\authorcover\\6e49b185-9cc9-4b75-a62b-54c29016ad8e.jpg",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\authorcover\\6e49b185-9cc9-4b75-a62b-54c29016ad8e.jpg",
       "PackagePath": "staticwebassets\\img\\authorcover\\6e49b185-9cc9-4b75-a62b-54c29016ad8e.jpg"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\bookcover\\1b881912-bd18-49d7-8a38-52a3e4b0bc3e.png",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\bookcover\\1b881912-bd18-49d7-8a38-52a3e4b0bc3e.png",
       "PackagePath": "staticwebassets\\img\\bookcover\\1b881912-bd18-49d7-8a38-52a3e4b0bc3e.png"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\bookcover\\dc6c5ded-ada6-4dd4-a677-b15c28233575.jpg",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\bookcover\\3c39c2b7-8cfd-4f15-95ea-03ba89dde593.jpg",
+      "PackagePath": "staticwebassets\\img\\bookcover\\3c39c2b7-8cfd-4f15-95ea-03ba89dde593.jpg"
+    },
+    {
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\bookcover\\76808c12-d2d8-4898-ba8e-e070347b3019.jpg",
+      "PackagePath": "staticwebassets\\img\\bookcover\\76808c12-d2d8-4898-ba8e-e070347b3019.jpg"
+    },
+    {
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\bookcover\\dc6c5ded-ada6-4dd4-a677-b15c28233575.jpg",
       "PackagePath": "staticwebassets\\img\\bookcover\\dc6c5ded-ada6-4dd4-a677-b15c28233575.jpg"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\js\\site.js",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\bootstrap-multiselect.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\bootstrap-multiselect.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\bootstrap-multiselect.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\bootstrap-multiselect.js",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\bootstrap-multiselect.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\bootstrap-multiselect.js"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\Learning\\IT_ApplicationDevelopment_1670\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

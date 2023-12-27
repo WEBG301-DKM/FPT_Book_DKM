@@ -10,7 +10,9 @@ namespace BookShop1Asm.Repositories
         private ICategory _category;
         private IAuthor _author;
         private IRequest _request;
-
+        private ICart _cart;
+        private IOrder _order;
+        private IOrderBook _orderBook;
         public UnitOfWorkRepository(AppDBContext context)
         {
             _context = context;
@@ -45,6 +47,29 @@ namespace BookShop1Asm.Repositories
             get
             {
                 return _request = _request ?? new RequestRepository(_context);
+            }
+        }
+        public ICart Cart
+        {
+            get
+            {
+                return _cart = _cart ?? new CartRepository(_context);
+            }
+        }
+
+        public IOrder Order
+        {
+            get
+            {
+                return _order = _order ?? new OrderRepository(_context);
+            }
+        }
+
+        public IOrderBook OrderBook
+        {
+            get
+            {
+                return _orderBook = _orderBook ?? new OrderBookRepository(_context);
             }
         }
 
