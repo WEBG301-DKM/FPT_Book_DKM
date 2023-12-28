@@ -24,7 +24,7 @@ namespace BookShop1Asm.Repositories
 
         public Order GetById(int? id)
         {
-            return _context.Order.Include("OrderBooks").FirstOrDefault(o => o.Id == id);
+            return _context.Order.Include("OrderBooks").Include("User").FirstOrDefault(o => o.Id == id);
         }
 
         public List<Order> GetOfUser(string currentUserID)
