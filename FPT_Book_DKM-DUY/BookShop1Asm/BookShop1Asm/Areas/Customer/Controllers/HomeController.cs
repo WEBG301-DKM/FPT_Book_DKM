@@ -8,7 +8,6 @@ using System.Diagnostics;
 namespace BookShop1Asm.Areas.Customer.Controllers
 {
     [Area("Customer")]
-    [Authorize(Roles = "Customer")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -32,7 +31,6 @@ namespace BookShop1Asm.Areas.Customer.Controllers
                 books = books.Where(v => v.BookCategories.Select(c => c.CategoryId).Contains(catId)).ToList();
             }
             return View(books);
-            return View();
         }
 
         public IActionResult Details(int? id)

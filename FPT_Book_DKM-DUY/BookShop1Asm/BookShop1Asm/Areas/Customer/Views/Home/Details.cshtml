@@ -56,8 +56,8 @@
 </div>
 @if(User.IsInRole("Customer")){
                 <div>
-                    <a asp-controller="Cart" asp-action="AddBookToCartInDetails" asp-route-id="@Model.Id" class="btn btn-info">Add To Cart</a>        
-                </div>
+        <a asp-controller="Cart" asp-action="AddBookToCart" asp-route-id="@Model.Id" class="btn btn-info">Add To Cart</a>
+    </div>
                 }
 <div>
     <a asp-controller="Home" asp-action="Index" asp-area="Customer">Back to List</a>

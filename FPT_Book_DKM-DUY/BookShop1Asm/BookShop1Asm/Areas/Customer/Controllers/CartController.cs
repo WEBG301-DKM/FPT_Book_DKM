@@ -49,26 +49,9 @@ namespace BookShop1Asm.Areas.Customer.Controllers
             _unitOfWork.Cart.AddBookToCart(cart);
             _unitOfWork.Save();
             TempData["success"] = "Add Book To Cart Successful";
-            return RedirectToAction("Index","Home");
+            return NoContent();
         }
 
-        public IActionResult AddBookToCartInDetails(int? id)
-        {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            Book book = _unitOfWork.Book.GetById(id);
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            Cart cart = new Cart();
-            cart.UserID = userId;
-            cart.BookID = book.Id;
-            cart.Quantity = 1;
-            _unitOfWork.Cart.AddBookToCart(cart);
-            _unitOfWork.Save();
-            TempData["success"] = "Add Book To Cart Successful";
-            return RedirectToAction("Details", "Home", new {id = id});
-        }
 
         public IActionResult RemoveBookToCart(int? id)
         {
@@ -76,7 +59,6 @@ namespace BookShop1Asm.Areas.Customer.Controllers
             {
                 return NotFound();
             }
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             Cart cart = _unitOfWork.Cart.GetById(id);
             _unitOfWork.Cart.Delete(cart);
             _unitOfWork.Save();
