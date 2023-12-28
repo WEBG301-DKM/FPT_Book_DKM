@@ -1,0 +1,36 @@
+﻿@model Order
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Order Details</h1>
+
+<div class="row pt-4 pb-4">
+    <div class="col-6">
+        <h3>Order Items</h3>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Book Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderBooks)
+        {
+            <tr>
+                <td>@item.BookName</td>
+                <td>@item.BookPrice $</td>
+                <td>@item.Quantity</td>
+            </tr>
+        }
+    </tbody>
+</table>
+    <div class="text-right mt-4">
+        <p class="font-weight-bold total-amount">Total: @Model.Total $</p>
+        <a asp-controller="Order" asp-action="Index" asp-area="StoreOwner">Back to List</a>
+    </div>

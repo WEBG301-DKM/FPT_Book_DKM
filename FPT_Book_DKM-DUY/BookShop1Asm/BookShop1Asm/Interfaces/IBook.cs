@@ -13,5 +13,7 @@ namespace BookShop1Asm.Interfaces
         void ResetCategory(Book book);
         Book GetById(int? id);
 
+        
+
     }
 }

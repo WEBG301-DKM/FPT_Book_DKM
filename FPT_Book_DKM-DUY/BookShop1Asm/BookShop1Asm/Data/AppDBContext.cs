@@ -14,7 +14,9 @@ namespace BookShop1Asm.Data
         public DbSet<BookAuthor> BookAuthor { get; set; }
         public DbSet<Request> Request { get; set; }
 
-
+        public DbSet<Cart> Cart { get; set; }
+        public DbSet<Order> Order { get; set; }
+        public DbSet<OrderBook> OrderBook { get; set; }
 
         public AppDBContext(DbContextOptions<AppDBContext> options) : base(options)
         {
@@ -32,6 +34,15 @@ namespace BookShop1Asm.Data
             modelBuilder.Entity<BookAuthor>().HasKey(bc => new { bc.BookId, bc.AuthorId });
             modelBuilder.Entity<BookAuthor>().HasOne(bc => bc.Book).WithMany(bc => bc.BookAuthors).HasForeignKey(b => b.BookId);
             modelBuilder.Entity<BookAuthor>().HasOne(bc => bc.Author).WithMany(bc => bc.BookAuthors).HasForeignKey(b => b.AuthorId);
+
+            modelBuilder.Entity<OrderBook>(entity =>
+            {
+                entity.HasKey(i => new
+                {
+                    i.BookId,
+                    i.OrderId,
+                });
+            });
 
             modelBuilder.Entity<RequestStatus>().HasData
                 (

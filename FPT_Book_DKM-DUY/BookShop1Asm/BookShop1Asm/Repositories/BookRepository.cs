@@ -50,5 +50,7 @@ namespace BookShop1Asm.Repositories
         {
             _context.BookCategory.RemoveRange(_context.BookCategory.Where(c => c.BookId == book.Id));
         }
+
+        
     }
 }

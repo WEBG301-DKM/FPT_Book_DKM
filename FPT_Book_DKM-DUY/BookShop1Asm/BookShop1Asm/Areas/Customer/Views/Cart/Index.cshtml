@@ -1,0 +1,41 @@
+﻿@model BookShop1Asm.ViewModels.CartViewModel.CartVM
+<div class="container">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+
+    <link rel="stylesheet" href="~/css/cart.css">
+    <h2 class="text-center mb-4">FPTBook Cart </h2>
+    <ul class="list-group">
+        <li class="list-group-item">
+            @{
+                foreach(Cart cart in Model.carts) {
+                <div class="row">
+                <div class="col-md-2">
+                    <img src="@cart.Book.Cover" alt="Product 1" class="img-fluid product-image">
+                </div>
+                <div class="col-md-10">
+                    <div class="product-details">
+                        <div class="product-info">
+                            <p class="product-name">Book Name: @cart.Book.Name</p>
+                            <p class="product-price">Price: @cart.Book.Price</p>
+                            <p class="product-quantity">Quantity: @cart.Quantity</p>
+                        </div>
+                        <div class="text-right">
+                            <a asp-area="Customer" asp-controller="Cart" asp-action="RemoveBookToCart" asp-route-id="@cart.Id" class="remove-btn">&times;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                }
+            }
+           
+          
+        </li>
+    </ul>
+    <div class="text-right mt-4">
+        <p class="font-weight-bold total-amount">Total: @Model.Total $</p>
+        <a asp-area="Customer" asp-controller="Order" asp-action="CheckOut" class="btn checkout-btn">Checkout</a>
+    </div>
+</div>

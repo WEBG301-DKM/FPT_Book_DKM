@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\BookShop1Asm.bundle.scp.css"
     },
     {
+      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\css\\cart.css",
+      "PackagePath": "staticwebassets\\css\\cart.css"
+    },
+    {
       "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -19,6 +23,18 @@
     {
       "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\bookcover\\1b881912-bd18-49d7-8a38-52a3e4b0bc3e.png",
       "PackagePath": "staticwebassets\\img\\bookcover\\1b881912-bd18-49d7-8a38-52a3e4b0bc3e.png"
+    },
+    {
+      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\bookcover\\3c39c2b7-8cfd-4f15-95ea-03ba89dde593.jpg",
+      "PackagePath": "staticwebassets\\img\\bookcover\\3c39c2b7-8cfd-4f15-95ea-03ba89dde593.jpg"
+    },
+    {
+      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\bookcover\\76808c12-d2d8-4898-ba8e-e070347b3019.jpg",
+      "PackagePath": "staticwebassets\\img\\bookcover\\76808c12-d2d8-4898-ba8e-e070347b3019.jpg"
+    },
+    {
+      "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\bookcover\\ab22047f-c141-4d74-a34d-6feaa54b5d2e.jpg",
+      "PackagePath": "staticwebassets\\img\\bookcover\\ab22047f-c141-4d74-a34d-6feaa54b5d2e.jpg"
     },
     {
       "Id": "D:\\Github\\FPT_Book_DKM\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\wwwroot\\img\\bookcover\\dc6c5ded-ada6-4dd4-a677-b15c28233575.jpg",

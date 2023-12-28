@@ -64,12 +64,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Github/FPT_Book_DKM/FPT_Book_DKM-DUY/BookShop1Asm/BookShop1Asm/Areas/Customer/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Github/FPT_Book_DKM/FPT_Book_DKM-DUY/BookShop1Asm/BookShop1Asm/Areas/Customer/Views/Home/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Github/FPT_Book_DKM/FPT_Book_DKM-DUY/BookShop1Asm/BookShop1Asm/Areas/Customer/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Github/FPT_Book_DKM/FPT_Book_DKM-DUY/BookShop1Asm/BookShop1Asm/Areas/Customer/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Github/FPT_Book_DKM/FPT_Book_DKM-DUY/BookShop1Asm/BookShop1Asm/Areas/Customer/Views/Order/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcT3JkZXJcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Github/FPT_Book_DKM/FPT_Book_DKM-DUY/BookShop1Asm/BookShop1Asm/Areas/Customer/Views/Order/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcT3JkZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Github/FPT_Book_DKM/FPT_Book_DKM-DUY/BookShop1Asm/BookShop1Asm/Areas/Customer/Views/_ViewImports.cshtml]
@@ -268,6 +284,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVPd25lclxWaWV3c1xCb29rXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Github/FPT_Book_DKM/FPT_Book_DKM-DUY/BookShop1Asm/BookShop1Asm/Areas/StoreOwner/Views/Order/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVPd25lclxWaWV3c1xPcmRlclxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Github/FPT_Book_DKM/FPT_Book_DKM-DUY/BookShop1Asm/BookShop1Asm/Areas/StoreOwner/Views/Order/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVPd25lclxWaWV3c1xPcmRlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Github/FPT_Book_DKM/FPT_Book_DKM-DUY/BookShop1Asm/BookShop1Asm/Areas/StoreOwner/Views/Request/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVPd25lclxWaWV3c1xSZXF1ZXN0XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -290,6 +314,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Github/FPT_Book_DKM/FPT_Book_DKM-DUY/BookShop1Asm/BookShop1Asm/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Github/FPT_Book_DKM/FPT_Book_DKM-DUY/BookShop1Asm/BookShop1Asm/Views/Shared/_Notification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Github/FPT_Book_DKM/FPT_Book_DKM-DUY/BookShop1Asm/BookShop1Asm/Views/Shared/_ValidationScriptsPartial.cshtml]
