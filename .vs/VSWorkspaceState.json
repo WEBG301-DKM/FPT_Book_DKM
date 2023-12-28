@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BookShop1Asm",
-    "\\BookShop1Asm\\BookShop1Asm",
-    "\\BookShop1Asm\\BookShop1Asm\\Data"
+    "\\FPT_Book_DKM-DUY",
+    "\\FPT_Book_DKM-DUY\\BookShop1Asm",
+    "\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm",
+    "\\FPT_Book_DKM-DUY\\BookShop1Asm\\BookShop1Asm\\Models"
   ],
   "PreviewInSolutionExplorer": false
 }

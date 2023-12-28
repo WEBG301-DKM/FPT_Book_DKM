@@ -14,13 +14,7 @@ namespace BookShop1Asm.Repositories
         }
         public List<Cart> GetCartByUser(string userId)
         {
-            var query = _context.Cart.Where(c => c.UserID == userId);
-            string includeProperties = "Book";
-            foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
-            {
-                query = query.Include(includeProp);
-            }
-            return query.ToList();
+            return _context.Cart.Include("Book").Where(c => c.UserID == userId).ToList();
         }
 
         public void AddBookToCart(Cart cart)

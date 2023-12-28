@@ -35,6 +35,15 @@ namespace BookShop1Asm.Data
             modelBuilder.Entity<BookAuthor>().HasOne(bc => bc.Book).WithMany(bc => bc.BookAuthors).HasForeignKey(b => b.BookId);
             modelBuilder.Entity<BookAuthor>().HasOne(bc => bc.Author).WithMany(bc => bc.BookAuthors).HasForeignKey(b => b.AuthorId);
 
+            modelBuilder.Entity<OrderBook>(entity =>
+            {
+                entity.HasKey(i => new
+                {
+                    i.BookId,
+                    i.OrderId,
+                });
+            });
+
             modelBuilder.Entity<RequestStatus>().HasData
                 (
                  new RequestStatus { Id = 1, Status = "Pending"},

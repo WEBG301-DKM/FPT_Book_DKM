@@ -247,26 +247,23 @@ namespace BookShop1Asm.Migrations
 
             modelBuilder.Entity("BookShop1Asm.Models.OrderBook", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
                     b.Property<int?>("BookId")
-                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<int?>("OrderId")
-                        .IsRequired()
                         .HasColumnType("int");
+
+                    b.Property<string>("BookName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<float>("BookPrice")
+                        .HasColumnType("real");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
-
-                    b.HasIndex("BookId");
+                    b.HasKey("BookId", "OrderId");
 
                     b.HasIndex("OrderId");
 
@@ -545,19 +542,11 @@ namespace BookShop1Asm.Migrations
 
             modelBuilder.Entity("BookShop1Asm.Models.OrderBook", b =>
                 {
-                    b.HasOne("BookShop1Asm.Models.Book", "Book")
-                        .WithMany()
-                        .HasForeignKey("BookId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("BookShop1Asm.Models.Order", "Order")
-                        .WithMany()
+                        .WithMany("OrderBooks")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Book");
 
                     b.Navigation("Order");
                 });
@@ -647,6 +636,11 @@ namespace BookShop1Asm.Migrations
             modelBuilder.Entity("BookShop1Asm.Models.Category", b =>
                 {
                     b.Navigation("BookCategories");
+                });
+
+            modelBuilder.Entity("BookShop1Asm.Models.Order", b =>
+                {
+                    b.Navigation("OrderBooks");
                 });
 #pragma warning restore 612, 618
         }

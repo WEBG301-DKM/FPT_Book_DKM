@@ -17,9 +17,24 @@ namespace BookShop1Asm.Areas.Customer.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            List<Order> orders = _unitOfWork.Order.GetOfUser(userId);
+            return View(orders);
         }
 
+        public IActionResult Detail(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            Order order = _unitOfWork.Order.GetById(id);
+            if (order == null)
+            {
+                return NotFound();
+            }
+            return View(order);
+        }
         public IActionResult CheckOut()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -34,17 +49,18 @@ namespace BookShop1Asm.Areas.Customer.Controllers
             Order order = new Order();
             order.UserId = userId;
             order.Total = 0;
-            order.Id = _unitOfWork.Order.CreateOrder(order);
+            order.OrderBooks = new List<OrderBook>();
             foreach (var cart in carts) {
                 order.Total = (order.Total + (cart.Quantity * cart.Book.Price));
                 OrderBook orderBook = new OrderBook();
-                orderBook.OrderId = order.Id;
                 orderBook.BookId = cart.Book.Id;
+                orderBook.BookName = cart.Book.Name;
+                orderBook.BookPrice = cart.Book.Price;
                 orderBook.Quantity = cart.Quantity;
-                _unitOfWork.OrderBook.Insert(orderBook);
+                order.OrderBooks.Add(orderBook);
                 _unitOfWork.Cart.Delete(cart);
             }
-            _unitOfWork.Order.Update(order);
+            _unitOfWork.Order.CreateOrder(order);
             _unitOfWork.Save();
 
             TempData["success"] = "Checkout Successful";

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookShop1Asm.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20231227110945_AddCartModel")]
-    partial class AddCartModel
+    [Migration("20231228040702_altOrderBook")]
+    partial class altOrderBook
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -223,6 +223,53 @@ namespace BookShop1Asm.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Category");
+                });
+
+            modelBuilder.Entity("BookShop1Asm.Models.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<double>("Total")
+                        .HasColumnType("float");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Order");
+                });
+
+            modelBuilder.Entity("BookShop1Asm.Models.OrderBook", b =>
+                {
+                    b.Property<int?>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("BookName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<float>("BookPrice")
+                        .HasColumnType("real");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("BookId", "OrderId");
+
+                    b.HasIndex("OrderId");
+
+                    b.ToTable("OrderBook");
                 });
 
             modelBuilder.Entity("BookShop1Asm.Models.Request", b =>
@@ -484,6 +531,28 @@ namespace BookShop1Asm.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("BookShop1Asm.Models.Order", b =>
+                {
+                    b.HasOne("BookShop1Asm.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("BookShop1Asm.Models.OrderBook", b =>
+                {
+                    b.HasOne("BookShop1Asm.Models.Order", "Order")
+                        .WithMany("OrderBooks")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+                });
+
             modelBuilder.Entity("BookShop1Asm.Models.Request", b =>
                 {
                     b.HasOne("BookShop1Asm.Models.RequestStatus", "RequestStatus")
@@ -569,6 +638,11 @@ namespace BookShop1Asm.Migrations
             modelBuilder.Entity("BookShop1Asm.Models.Category", b =>
                 {
                     b.Navigation("BookCategories");
+                });
+
+            modelBuilder.Entity("BookShop1Asm.Models.Order", b =>
+                {
+                    b.Navigation("OrderBooks");
                 });
 #pragma warning restore 612, 618
         }

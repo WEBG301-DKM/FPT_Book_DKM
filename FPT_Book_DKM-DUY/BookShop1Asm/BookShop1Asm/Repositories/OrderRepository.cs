@@ -1,6 +1,7 @@
 ﻿using BookShop1Asm.Data;
 using BookShop1Asm.Interfaces;
 using BookShop1Asm.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookShop1Asm.Repositories
 {
@@ -11,11 +12,24 @@ namespace BookShop1Asm.Repositories
         {
             _context = context;
         }
-        public int CreateOrder(Order order)
+        public void CreateOrder(Order order)
         {
             _context.Order.Add(order);
-            _context.SaveChanges();
-            return order.Id;
+        }
+
+        public List<Order> GetAll()
+        {
+            return _context.Order.ToList();
+        }
+
+        public Order GetById(int? id)
+        {
+            return _context.Order.Include("OrderBooks").FirstOrDefault(o => o.Id == id);
+        }
+
+        public List<Order> GetOfUser(string currentUserID)
+        {
+            return _context.Order.Where(o => o.UserId == currentUserID).ToList();
         }
 
         public void Update(Order order)

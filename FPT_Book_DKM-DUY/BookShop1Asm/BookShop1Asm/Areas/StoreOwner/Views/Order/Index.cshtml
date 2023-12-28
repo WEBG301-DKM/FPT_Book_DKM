@@ -1,0 +1,30 @@
+﻿@model List<Order>
+<!-- <partial name="_Notification"/> -->
+
+<div class="row pt-4 pb-4">
+    <div class="col-6">
+        <h1>List of Orders</h1>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>OrderId</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.Id</td>
+                <td>@order.Total</td>
+                <td>
+                    <a asp-controller="Order" asp-action="Detail" asp-area="StoreOwner" asp-route-id="@order.Id" class="btn btn-info">Details</a>        
+                </td>
+               
+            </tr>
+        }
+    </tbody>
+</table>

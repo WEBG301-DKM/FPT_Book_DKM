@@ -8,7 +8,6 @@
         IRequest Request { get; }
         ICart Cart { get; }
         IOrder Order { get; }
-        IOrderBook OrderBook { get; }
         void Save();
         void AddRange(IEnumerable<Object> objects);
     }

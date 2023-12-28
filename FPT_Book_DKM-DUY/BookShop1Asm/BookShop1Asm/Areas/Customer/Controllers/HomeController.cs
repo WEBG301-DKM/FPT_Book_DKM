@@ -8,7 +8,7 @@ using System.Diagnostics;
 namespace BookShop1Asm.Areas.Customer.Controllers
 {
     [Area("Customer")]
-    //[Authorize(Roles = "Customer")]
+    [Authorize(Roles = "Customer")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -33,6 +33,12 @@ namespace BookShop1Asm.Areas.Customer.Controllers
             }
             return View(books);
             return View();
+        }
+
+        public IActionResult Details(int? id)
+        {
+            Book book = _unitOfWork.Book.GetById(id);
+            return View(book);
         }
 
         public IActionResult Privacy()

@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="Migrations\" />
     <Folder Include="wwwroot\img\bookcover\" />
     <Folder Include="wwwroot\img\authorcover\" />
   </ItemGroup>

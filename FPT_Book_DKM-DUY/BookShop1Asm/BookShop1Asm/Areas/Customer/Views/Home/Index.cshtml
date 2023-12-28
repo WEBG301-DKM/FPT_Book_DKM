@@ -36,6 +36,9 @@
                 <td>@book.Name</td>
                 <td>@book.Description</td>
                 <td>@book.Price</td>
+                <td>
+                <a asp-controller="Home" asp-action="Details" asp-area="Customer" asp-route-id="@book.Id" class="btn btn-info">Details</a>
+                </td>
                 @if(User.IsInRole("Customer")){
                 <td>
                     <a asp-controller="Cart" asp-action="AddBookToCart" asp-route-id="@book.Id" class="btn btn-info">Add To Cart</a>        

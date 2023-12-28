@@ -13,12 +13,10 @@ namespace BookShop1Asm.Areas.Customer.Controllers
     public class CartController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly UserManager<ApplicationUser> _userManager;
-        public CartController(UserManager<ApplicationUser> userManager,IUnitOfWork unitOfWork)
+        public CartController(IUnitOfWork unitOfWork)
         {
             
             _unitOfWork = unitOfWork;
-            _userManager = userManager;
         }
 
         public IActionResult Index()
@@ -51,7 +49,25 @@ namespace BookShop1Asm.Areas.Customer.Controllers
             _unitOfWork.Cart.AddBookToCart(cart);
             _unitOfWork.Save();
             TempData["success"] = "Add Book To Cart Successful";
-            return RedirectToAction("Index");
+            return RedirectToAction("Index","Home");
+        }
+
+        public IActionResult AddBookToCartInDetails(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            Book book = _unitOfWork.Book.GetById(id);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            Cart cart = new Cart();
+            cart.UserID = userId;
+            cart.BookID = book.Id;
+            cart.Quantity = 1;
+            _unitOfWork.Cart.AddBookToCart(cart);
+            _unitOfWork.Save();
+            TempData["success"] = "Add Book To Cart Successful";
+            return RedirectToAction("Details", "Home", new {id = id});
         }
 
         public IActionResult RemoveBookToCart(int? id)

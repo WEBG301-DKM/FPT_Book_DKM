@@ -4,23 +4,23 @@
 
 namespace BookShop1Asm.Migrations
 {
-    public partial class reasonForReequest : Migration
+    public partial class altOrderBook : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<string>(
-                name: "Reason",
-                table: "Request",
-                type: "nvarchar(max)",
-                nullable: true,
-                defaultValue: "");
+            migrationBuilder.AddColumn<float>(
+                name: "BookPrice",
+                table: "OrderBook",
+                type: "real",
+                nullable: false,
+                defaultValue: 0f);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "Reason",
-                table: "Request");
+                name: "BookPrice",
+                table: "OrderBook");
         }
     }
 }

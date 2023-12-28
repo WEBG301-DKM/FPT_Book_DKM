@@ -12,7 +12,6 @@ namespace BookShop1Asm.Repositories
         private IRequest _request;
         private ICart _cart;
         private IOrder _order;
-        private IOrderBook _orderBook;
         public UnitOfWorkRepository(AppDBContext context)
         {
             _context = context;
@@ -62,14 +61,6 @@ namespace BookShop1Asm.Repositories
             get
             {
                 return _order = _order ?? new OrderRepository(_context);
-            }
-        }
-
-        public IOrderBook OrderBook
-        {
-            get
-            {
-                return _orderBook = _orderBook ?? new OrderBookRepository(_context);
             }
         }
 

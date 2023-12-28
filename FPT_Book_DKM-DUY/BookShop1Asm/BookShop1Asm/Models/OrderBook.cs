@@ -6,16 +6,13 @@ namespace BookShop1Asm.Models
 {
     public class OrderBook
     {
-        [Key]
-        public int Id { get; set; }
         public int? OrderId { get; set; }
         [ForeignKey("OrderId")]
         [ValidateNever]
         public Order Order { get; set; }
         public int? BookId { get; set; }
-        [ForeignKey("BookId")]
-        [ValidateNever]
-        public Book Book { get; set; }
+        public string BookName { get; set; }
+        public float BookPrice { get; set; }
         public int Quantity { get; set; }
 
     }
