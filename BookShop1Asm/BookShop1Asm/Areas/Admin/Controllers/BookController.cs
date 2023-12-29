@@ -139,16 +139,16 @@ namespace BookShop1Asm.Areas.Admin.Controllers
                         }
                     }
                     _unitOfWork.Book.Insert(bookCUvm.Book);
-                    TempData["success"] = "Book created succesfully";
+                    //TempData["success"] = "Book created succesfully";
                 }
                 else
                 {
-                    List<BookAuthor> oldBookAuthors = new List<BookAuthor>();
-                    bookCUvm.Book.BookAuthors.ToList().ForEach(res => oldBookAuthors.Add(res));
+                    //List<BookAuthor> oldBookAuthors = new List<BookAuthor>();
+                    //bookCUvm.Book.BookAuthors.ToList().ForEach(res => oldBookAuthors.Add(res));
                     _unitOfWork.Book.ResetAuthor(bookCUvm.Book);
 
-                    List<BookCategory> oldBookCategories = new List<BookCategory>();
-                    bookCUvm.Book.BookCategories.ToList().ForEach(res => oldBookCategories.Add(res));
+                    //List<BookCategory> oldBookCategories = new List<BookCategory>();
+                    //bookCUvm.Book.BookCategories.ToList().ForEach(res => oldBookCategories.Add(res));
                     _unitOfWork.Book.ResetCategory(bookCUvm.Book);
 
                     _unitOfWork.Book.Update(bookCUvm.Book);
@@ -180,7 +180,7 @@ namespace BookShop1Asm.Areas.Admin.Controllers
                         }
                         _unitOfWork.AddRange(newBookCategories);
                     }
-                    TempData["success"] = "Book updated succesfully";
+                    //TempData["success"] = "Book updated succesfully";
                 }
                 //_dbContext.SaveChanges();
                 _unitOfWork.Save();
@@ -221,7 +221,7 @@ namespace BookShop1Asm.Areas.Admin.Controllers
             //_dbContext.SaveChanges();
             _unitOfWork.Book.Delete(book);
             _unitOfWork.Save();
-            TempData["success"] = "Book deleted succesfully";
+            //TempData["success"] = "Book deleted succesfully";
             return RedirectToAction("Index");
         }
     }

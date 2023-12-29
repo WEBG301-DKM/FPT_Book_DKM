@@ -1,7 +1,7 @@
 ﻿@model Author
 <!-- <partial name="_Notification"/> -->
 
-<h1>Edit Cat</h1>
+<h1>Delete Author</h1>
 <form  method="post">
     <input asp-for="Id" hidden />
     <div class="form-group">
@@ -21,7 +21,3 @@
   <button type="submit" class="btn btn-primary">Delete</button>
   <a asp-controller="Author" asp-action="Index" class="btn btn-primary">Cancel</a>
 </form>
-
-@section Scripts{
-    <partial name="_ValidationScriptsPartial"/>
-}

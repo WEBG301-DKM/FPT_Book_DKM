@@ -47,10 +47,10 @@
         </dt>
         
         <dd class = "col-sm-10">
-            @foreach (var author in Model.BookCategories)
-        {
-                <u>@author.Category.Name</u><text> </text>
-        }
+            @foreach (var category in Model.BookCategories)
+            {
+                <u>@category.Category.Name</u><text> </text>
+            }
         </dd>
     </dl>
 </div>

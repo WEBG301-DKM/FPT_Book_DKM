@@ -69,12 +69,12 @@ namespace BookShop1Asm.Areas.Admin.Controllers
                 if (author.Id == 0)
                 {
                     _unitOfWork.Author.Insert(author);
-                    TempData["success"] = "Author created succesfully";
+                    //TempData["success"] = "Author created succesfully";
                 }
                 else
                 {
                     _unitOfWork.Author.Update(author);
-                    TempData["success"] = "Author updated succesfully";
+                    //TempData["success"] = "Author updated succesfully";
                 }
                 _unitOfWork.Save();
                 return RedirectToAction("Index");
@@ -111,7 +111,7 @@ namespace BookShop1Asm.Areas.Admin.Controllers
             }
             _unitOfWork.Author.Delete(author);
             _unitOfWork.Save();
-            TempData["success"] = "Author deleted succesfully";
+            //TempData["success"] = "Author deleted succesfully";
             return RedirectToAction("Index");
         }
     }
