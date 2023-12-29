@@ -36,7 +36,7 @@ namespace BookShop1Asm.Areas.Customer.Controllers
         public IActionResult Details(int? id)
         {
             Book book = _unitOfWork.Book.GetById(id);
-            return View(book);
+            return View(book); 
         }
 
         public IActionResult Privacy()

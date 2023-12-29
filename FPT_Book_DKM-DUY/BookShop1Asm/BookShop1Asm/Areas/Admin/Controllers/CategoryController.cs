@@ -62,7 +62,7 @@ namespace BookShop1Asm.Areas.Admin.Controllers
                 //_dbContext.SaveChanges();
                 _unitOfWork.Category.Update(category);
                 _unitOfWork.Save();
-                TempData["success"] = "Edited successfully";
+            //    TempData["success"] = "Edited successfully";
                 return RedirectToAction("index");
             }
 
@@ -92,7 +92,7 @@ namespace BookShop1Asm.Areas.Admin.Controllers
             //_dbContext.SaveChanges();
             _unitOfWork.Category.Delete(category);
             _unitOfWork.Save();
-            TempData["success"] = "Category deleted succesfully";
+      //      TempData["success"] = "Category deleted succesfully";
             return RedirectToAction("Index");
         }
     }

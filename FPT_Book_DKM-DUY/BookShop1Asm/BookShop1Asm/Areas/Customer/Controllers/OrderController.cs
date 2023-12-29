@@ -60,7 +60,7 @@ namespace BookShop1Asm.Areas.Customer.Controllers
                 order.OrderBooks.Add(orderBook);
                 _unitOfWork.Cart.Delete(cart);
             }
-            _unitOfWork.Order.CreateOrder(order);
+            _unitOfWork.Order.CreateOrder(order);  
             _unitOfWork.Save();
 
             TempData["success"] = "Checkout Successful";

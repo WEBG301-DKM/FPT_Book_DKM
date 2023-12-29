@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 
-namespace BookShop1Asm.Areas.Admin.Controllers
+namespace BookShop1Asm.StoreOwner.Admin.Controllers
 {
     [Area("StoreOwner")]
     [Authorize(Roles = "StoreOwner")]
@@ -31,7 +31,7 @@ namespace BookShop1Asm.Areas.Admin.Controllers
             return View(books);
         }*/
 
-        public IActionResult Index(string search, int catId=0)
+        public IActionResult Index(string search, int catId = 0)
         {
             //List<Book> books = _dbContext.Book.ToList();
 
@@ -43,7 +43,7 @@ namespace BookShop1Asm.Areas.Admin.Controllers
             }
             if (catId != 0)
             {
-                books= books.Where(v => v.BookCategories.Select(c => c.CategoryId).Contains(catId)).ToList();
+                books = books.Where(v => v.BookCategories.Select(c => c.CategoryId).Contains(catId)).ToList();
             }
             return View(books);
         }
@@ -72,7 +72,7 @@ namespace BookShop1Asm.Areas.Admin.Controllers
             };
             List<int> auIds = new List<int>();
             List<int> catIds = new List<int>();
-            if (id == null ||id == 0)
+            if (id == null || id == 0)
             {
                 //Create new Book
                 return View(bookCUvm);
@@ -141,16 +141,16 @@ namespace BookShop1Asm.Areas.Admin.Controllers
                         }
                     }
                     _unitOfWork.Book.Insert(bookCUvm.Book);
-                    TempData["success"] = "Book created succesfully";
+                    //TempData["success"] = "Book created succesfully";
                 }
                 else
                 {
-                    List<BookAuthor> oldBookAuthors = new List<BookAuthor>();
-                    bookCUvm.Book.BookAuthors.ToList().ForEach(res => oldBookAuthors.Add(res));
+                    //List<BookAuthor> oldBookAuthors = new List<BookAuthor>();
+                    //bookCUvm.Book.BookAuthors.ToList().ForEach(res => oldBookAuthors.Add(res));
                     _unitOfWork.Book.ResetAuthor(bookCUvm.Book);
 
-                    List<BookCategory> oldBookCategories = new List<BookCategory>();
-                    bookCUvm.Book.BookCategories.ToList().ForEach(res => oldBookCategories.Add(res));
+                    //List<BookCategory> oldBookCategories = new List<BookCategory>();
+                    //bookCUvm.Book.BookCategories.ToList().ForEach(res => oldBookCategories.Add(res));
                     _unitOfWork.Book.ResetCategory(bookCUvm.Book);
 
                     _unitOfWork.Book.Update(bookCUvm.Book);
@@ -182,7 +182,7 @@ namespace BookShop1Asm.Areas.Admin.Controllers
                         }
                         _unitOfWork.AddRange(newBookCategories);
                     }
-                    TempData["success"] = "Book updated succesfully";
+                    //TempData["success"] = "Book updated succesfully";
                 }
                 //_dbContext.SaveChanges();
                 _unitOfWork.Save();
@@ -223,7 +223,7 @@ namespace BookShop1Asm.Areas.Admin.Controllers
             //_dbContext.SaveChanges();
             _unitOfWork.Book.Delete(book);
             _unitOfWork.Save();
-            TempData["success"] = "Book deleted succesfully";
+            //TempData["success"] = "Book deleted succesfully";
             return RedirectToAction("Index");
         }
     }
